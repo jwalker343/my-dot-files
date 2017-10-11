@@ -248,6 +248,7 @@ ii() {
     echo -e "\n${NORMAL}Current Default GWs :\n${RED} " ; netstat -nr | grep -Eo 'default.+[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}.+en.'
     echo -e "\n${NORMAL}Current DNS Servers :\n${RED} " ; cat /etc/resolv.conf | grep -Eo 'nameserver [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
     echo -e "\n${NORMAL}Public facing IP Address :${RED} " ; curl ipinfo.io
+    echo -e "\n${NORMAL}Speedtest.net ATLANTA, GA :${RED} " ; speedtest-cli --share --server 10035
     echo
 }
 
