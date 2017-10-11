@@ -1,4 +1,4 @@
-#Bash configuration
+# Bash configuration
 
 ```
 brew install thefuck
@@ -13,7 +13,7 @@ brew install speedtest_cli
 brew install z
 ```
 
-#Credit & Source
+# Credit & Source
 Shamelessly stolen from various online sources including but not limited to:
 - https://natelandau.com/my-mac-osx-bash_profile/
 - https://gist.github.com/natelandau/10654137
