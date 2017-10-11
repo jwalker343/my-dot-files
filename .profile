@@ -100,7 +100,7 @@ PROMPT_COMMAND="PS1=\"${RESET}${CYAN}\W${NORMAL} \`${PROMPT_TRUELASTERROR}\`\`${
 
 #   Set Paths
 #   ------------------------------------------------------------
-export PATH=~/bin:vendor/bin:~/.composer/vendor/bin/:/usr/local/bin:/usr/local/git/bin:/usr/local/mysql/bin:/usr/local/php5/bin:/Users/johnny.walker/bin:$PATH
+export PATH=~/bin:vendor/bin:/usr/local/bin:/usr/local/git/bin:$PATH
 
 #   Set Default Editor 
 #   ------------------------------------------------------------
@@ -121,7 +121,7 @@ export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config:$(ls ~/kube/*.* | paste -s -d: 
 
 # export secret vars
 #HOMEBREW_GITHUB_API_TOKEN
-source ~/git/johnny-dot-files/secretenvvar
+source ~/git/my-dot-files/envvar.secret
 
 
 
