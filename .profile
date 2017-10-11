@@ -16,15 +16,26 @@
 #   1.  DEFINITIONS
 #   -------------------------------
 
+#BAD COLORS NO WORKING, leads to incorrect wrapping on prompt
+# CYAN="\033[0;36m\]"
+# GREEN="\033[0;32m\]"
+# NORMAL="\033[0m\]"
+# PURPLE="\033[0;35m\]"
+# RED="\033[1;31m\]"
+# RESET="\[\017\]"
+# WHITE="\033[1;37m\]"
+# YELLOW="\033[1;33m\]"
 
-CYAN="\033[0;36m"
-GREEN="\033[0;32m"
-NORMAL="\033[0m"
-PURPLE="\033[0;35m"
-RED="\033[1;31m"
+CYAN="\[\033[0;36m\]"
+GREEN="\[\033[0;32m\]"
+NORMAL="\[\033[0m\]"
+PURPLE="\[\033[0;35m\]"
+RED="\[\033[1;31m\]"
 RESET="\[\017\]"
-WHITE="\033[1;37m"
-YELLOW="\033[1;33m"
+WHITE="\[\033[1;37m\]"
+YELLOW="\[\033[1;33m\]"
+
+
 
 SMILEY="${GREEN}:)${NORMAL}"
 FROWNY="${RED}:(${NORMAL}"
@@ -96,7 +107,7 @@ function git-branch-prompt {
 
 #   Change Prompt
 #   ------------------------------------------------------------
-PROMPT_COMMAND="PS1=\"${RESET}${CYAN}\W${NORMAL} \`${PROMPT_TRUELASTERROR}\`\`${PROMPT_GIT_STATUS}\`\`${PROMPT_PREVIOUS_STATUS}\`${NORMAL}\";"
+PROMPT_COMMAND="PS1=\"${RESET}${CYAN}\W${NORMAL} \`${PROMPT_GIT_STATUS}\`\`${PROMPT_PREVIOUS_STATUS}\`${NORMAL}\";"
 
 #   Set Paths
 #   ------------------------------------------------------------
@@ -251,6 +262,11 @@ ii() {
     echo -e "\n${NORMAL}Speedtest.net ATLANTA, GA :${RED} " ; speedtest-cli --share --server 10035
     echo
 }
+
+
+#   z:   maintain a working list of directories you actually use with z
+#   -------------------------------------------------------------------
+source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 
 
 
