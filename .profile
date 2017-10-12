@@ -35,14 +35,8 @@ RESET="\[\017\]"
 WHITE="\[\033[1;37m\]"
 YELLOW="\[\033[1;33m\]"
 
-
-
 SMILEY="${GREEN}:)${NORMAL}"
 FROWNY="${RED}:(${NORMAL}"
-TRUELASTERROR=0
-PROMPT_GIT_STATUS="printf \"\$(git-branch-prompt)\""
-PROMPT_PREVIOUS_STATUS="if [ \$TRUELASTERROR = 0 ]; then echo \"${SMILEY} \"; else echo \"${FROWNY} \"; fi"
-PROMPT_TRUELASTERROR="export TRUELASTERROR=\$?"
 
 
 
@@ -107,7 +101,25 @@ function git-branch-prompt {
 
 #   Change Prompt
 #   ------------------------------------------------------------
-PROMPT_COMMAND="PS1=\"${RESET}${CYAN}\W${NORMAL} \`${PROMPT_GIT_STATUS}\`\`${PROMPT_PREVIOUS_STATUS}\`${NORMAL}\";"
+__prompt_command() {
+    local EXIT="$?"             # This needs to be first
+
+
+    export PROMPTSMILE="${SMILEY}"
+    if [ $EXIT = 0 ]; then 
+      export PROMPTSMILE="${SMILEY} " 
+    else 
+      export PROMPTSMILE="${FROWNY} " 
+    fi
+
+
+
+    PS1="${RESET}${CYAN}\W${NORMAL} $(git-branch-prompt)${PROMPTSMILE}${NORMAL}"
+}
+
+#PROMPT_COMMAND="PS1=\"${RESET}${CYAN}\W${NORMAL} \`${PROMPT_GIT_STATUS}\`\`${PROMPT_PREVIOUS_STATUS}\`${NORMAL}\";"
+PROMPT_COMMAND=__prompt_command
+
 
 #   Set Paths
 #   ------------------------------------------------------------
@@ -160,8 +172,8 @@ if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
 fi
 
 #azure Completion
-if [ -f /Users/johnny.walker/lib/azure-cli ]; then
-    source '/Users/johnny.walker/lib/azure-cli'
+if [ -f ~/lib/azure-cli/az.completion ]; then
+    source ~/lib/azure-cli/az.completion
 fi
 
 
