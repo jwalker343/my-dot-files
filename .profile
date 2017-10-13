@@ -248,7 +248,7 @@ mcd () { mkdir -p "$1" && cd "$1"; }
 cd () { 
   builtin cd "$@"
   if [ $? == 0 ]; then
-    ls
+    ls -hpG
   else
     return 1
   fi
