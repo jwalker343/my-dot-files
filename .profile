@@ -16,15 +16,6 @@
 #   1.  DEFINITIONS
 #   -------------------------------
 
-#BAD COLORS NO WORKING, leads to incorrect wrapping on prompt
-# CYAN="\033[0;36m\]"
-# GREEN="\033[0;32m\]"
-# NORMAL="\033[0m\]"
-# PURPLE="\033[0;35m\]"
-# RED="\033[1;31m\]"
-# RESET="\[\017\]"
-# WHITE="\033[1;37m\]"
-# YELLOW="\033[1;33m\]"
 
 CYAN="\[\033[0;36m\]"
 GREEN="\[\033[0;32m\]"
@@ -34,6 +25,9 @@ RED="\[\033[1;31m\]"
 RESET="\[\017\]"
 WHITE="\[\033[1;37m\]"
 YELLOW="\[\033[1;33m\]"
+
+
+
 
 SMILEY="${GREEN}:)${NORMAL}"
 FROWNY="${RED}:(${NORMAL}"
@@ -196,7 +190,7 @@ function copy-key {
 
 #   showa: to remind yourself of an alias (given some part of it)
 #   ------------------------------------------------------------
-showa () { /usr/bin/grep --color=always -i -a1 $@ ~/Library/init/bash/aliases.bash | grep -v '^\s*$' | less -FSRXc ; }
+showa () { /usr/bin/grep --color=always -i -a1 $@ ~/.profile | grep -v '^\s*$' | less -FSRXc ; }
 
 
 
@@ -264,14 +258,19 @@ cd () {
 #   ii:  display useful host related informaton
 #   -------------------------------------------------------------------
 ii() {
+
+    LNORMAL="\033[0m"
+    LRED="\033[1;31m"
+
+
     echo -e "NETWORK INFORMATION"
-    echo -e "\n${NORMAL}Current date :${RED} " ; date
-    echo -e "\n${NORMAL}Machine stats :${RED} " ; uptime
-    echo -e "\n${NORMAL}Current Private IPs :\n${RED} " ; ifconfig | grep -Eo 'inet [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
-    echo -e "\n${NORMAL}Current Default GWs :\n${RED} " ; netstat -nr | grep -Eo 'default.+[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}.+en.'
-    echo -e "\n${NORMAL}Current DNS Servers :\n${RED} " ; cat /etc/resolv.conf | grep -Eo 'nameserver [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
-    echo -e "\n${NORMAL}Public facing IP Address :${RED} " ; curl ipinfo.io
-    echo -e "\n${NORMAL}Speedtest.net ATLANTA, GA :${RED} " ; speedtest-cli --share --server 10035
+    echo -e "\n${LNORMAL}Current date :${LRED} " ; date
+    echo -e "\n${LNORMAL}Machine stats :${LRED} " ; uptime
+    echo -e "\n${LNORMAL}Current Private IPs :${LRED} " ; ifconfig | grep -Eo 'inet [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
+    echo -e "\n${LNORMAL}Current Default GWs :${LRED} " ; netstat -nr | grep -Eo 'default.+[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}.+en.'
+    echo -e "\n${LNORMAL}Current DNS Servers :${LRED} " ; cat /etc/resolv.conf | grep -Eo 'nameserver [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
+    echo -e "\n${LNORMAL}Public facing IP Address :${LRED} " ; curl ipinfo.io
+    echo -e "\n${LNORMAL}Speedtest.net ATLANTA, GA :${LRED} " ; speedtest-cli --share --server 10035
     echo
 }
 
