@@ -15,3 +15,5 @@
 	trustExitCode = true
 [credential]
 	helper = cache
+[push]
+	default = simple
