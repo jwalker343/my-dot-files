@@ -10,7 +10,8 @@ brew install git-crypt
 brew install git-flow
 brew install nmap
 brew install speedtest_cli
-brew install z
+
+brew cask install docker
 ```
 
 # Credit & Source

@@ -303,8 +303,8 @@ alias f='open -a Finder ./'                 # Opens current directory in MacOS F
 
 alias myip='curl ipinfo.io'                 # Public facing IP Address
 alias flushdns='dscacheutil -flushcache'    # Flush out the DNS Cache
-alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
 
 
 # Vagrant
