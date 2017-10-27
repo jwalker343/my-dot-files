@@ -141,6 +141,14 @@ export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config:$(ls ~/kube/*.* | paste -s -d: 
 source ~/git/my-dot-files/envvar.secret
 
 
+#   source sysadmin-docker-tools repo
+#   ------------------------------------------------------------
+for file in ~/git/sysadmin-docker-tools/* ; do
+  if [ ! "$file" == "readme.md" ] && [ ! -d "$file" ] ; then
+    . "$file"
+  fi
+done
+
 
 
 #   -------------------------------
@@ -169,6 +177,12 @@ fi
 if [ -f ~/lib/azure-cli/az.completion ]; then
     source ~/lib/azure-cli/az.completion
 fi
+
+#kubectl completion
+if [ -x "$(command -v kubectl)" ]; then
+    source <(kubectl completion bash)
+fi
+
 
 
 
