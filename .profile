@@ -330,3 +330,10 @@ alias vs="vagrant suspend"
 alias vssh="vagrant ssh"
 alias vu="vagrant up"
 alias vm="ssh vagrant@127.0.0.1 -p 2222"
+
+
+# Kubectl & Kubernetes
+alias k="kubectl"
+alias kpods="kubectl get pods"
+alias ksvc="kubectl get services"
+alias kdep="kubectl get deployments"
