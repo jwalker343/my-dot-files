@@ -15,7 +15,7 @@
 #   -------------------------------
 #   1.  DEFINITIONS
 #   -------------------------------
-
+eval $(thefuck --alias)
 
 CYAN="\[\033[0;36m\]"
 GREEN="\[\033[0;32m\]"
@@ -117,7 +117,8 @@ PROMPT_COMMAND=__prompt_command
 
 #   Set Paths
 #   ------------------------------------------------------------
-export PATH=~/bin:vendor/bin:/usr/local/bin:/usr/local/git/bin:$PATH
+export GOPATH=$HOME/go
+export PATH=~/bin:vendor/bin:/usr/local/bin:/usr/local/git/bin:$PATH:/usr/local/go/bin:$GOPATH/bin
 
 #   Set Default Editor 
 #   ------------------------------------------------------------
@@ -294,6 +295,11 @@ ii() {
 source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 
 
+#   aa:  do the thing
+#   -------------------------------------------------------------------
+function kns {
+  kubectl config set-context $(kubectl config current-context) --namespace=$1
+}
 
 
 #   -------------------------------
@@ -337,3 +343,4 @@ alias k="kubectl"
 alias kpods="kubectl get pods"
 alias ksvc="kubectl get services"
 alias kdep="kubectl get deployments"
+alias kci="kubectl cluster-info; kubectl get namespaces"
