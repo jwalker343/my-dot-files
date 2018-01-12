@@ -298,6 +298,7 @@ source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 #   aa:  do the thing
 #   -------------------------------------------------------------------
 function kns {
+  echo "Setting kubectl default namespace to $1"
   kubectl config set-context $(kubectl config current-context) --namespace=$1
 }
 
@@ -343,4 +344,9 @@ alias k="kubectl"
 alias kpods="kubectl get pods"
 alias ksvc="kubectl get services"
 alias kdep="kubectl get deployments"
-alias kci="kubectl cluster-info; kubectl get namespaces"
+alias kci="kubectl cluster-info; kubectl get nodes; kubectl get namespaces"
+
+
+
+#Get current default namespace
+#k config get-contexts | grep "*" | awk '{print $5}'
