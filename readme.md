@@ -1,4 +1,4 @@
-# Bash configuration
+# Bash Configuration
 
 
 
@@ -47,6 +47,14 @@ brew cask install google-backup-and-sync
 # Configure Environment
 
 sudo ./motd.sh
+
+mkdir ~/Documents/git
+ln -s ~/Documents/git ~/git
+
+cd ~/git
+git clone https://github.com/jwalker343/my-dot-files.git
+
+
 ```
 
 # Credit & Source
