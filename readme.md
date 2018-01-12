@@ -1,7 +1,12 @@
 # Bash configuration
 
 
+
 ```bash
+# Install Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+
 # Install Tools
 
 brew install thefuck
@@ -23,12 +28,19 @@ brew install kubectl
 brew tap caskroom/cask
 
 brew cask install docker
+brew cask install microsoft-remote-desktop-beta
 brew cask install qlcolorcode
 brew cask install qlmarkdown
 brew cask install quicklook-json
 brew cask install quicklook-csv
 brew cask install qlstephen
 brew cask install cheatsheet
+brew cask install epichrome
+brew cask install lastpass
+brew cask install google-chrome
+brew cask install bettertouchtool
+brew cask install google-backup-and-sync
+
 ```
 
 ```bash
