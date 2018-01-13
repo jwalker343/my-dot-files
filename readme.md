@@ -44,28 +44,34 @@ Brew cask install visual-studio-code-insiders
 
 ```
 
+### Configure Environment
 ```bash
-# Configure Environment
-
 # Allow apps installed from anywhere
 sudo spctl --master-disable
 
+# Install Lastpass addons
 open '/usr/local/Caskroom/lastpass/latest/LastPass Installer'
 
-sudo ./motd.sh
-
+# make the git directories
 mkdir ~/Documents/git
 ln -s ~/Documents/git ~/git
 
+# Clone in this repo
 cd ~/git
 git clone https://github.com/jwalker343/my-dot-files.git
 
+# Link up items
 ln -s ~/git/my-dot-files/.profile ~/.profile
 ln -s ~/git/my-dot-files/.gitignore_global ~/.gitignore_global
 ln -s ~/git/my-dot-files/.gitconfig ~/.gitconfig
 
-
+# install the login banner
+sudo ./motd.sh
 ```
+
+# [Configure Preferences and Applications](application_preferences.md)
+There are application preferences and mac preferences that cannot be scripted out this is where they are documented
+
 
 # Credit & Source
 Shamelessly stolen from various online sources including but not limited to:
