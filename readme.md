@@ -67,6 +67,13 @@ ln -s ~/git/my-dot-files/.gitconfig ~/.gitconfig
 
 # install the login banner
 sudo ./motd.sh
+
+# Enable Sha1 for SSH & Pipe knownhost to /dev/null
+mkdir ~/.ssh
+echo -e "Host *" >> ~/.ssh/config
+echo -e "\t StrictHostKeyChecking no" >> ~/.ssh/config
+echo -e "\t UserKnownHostsFile=/dev/null" >> ~/.ssh/config
+echo -e "\t KexAlgorithms +diffie-hellman-group1-sha1" >> ~/.ssh/config
 ```
 
 # [Configure Preferences and Applications](application_preferences.md)
@@ -78,3 +85,6 @@ Shamelessly stolen from various online sources including but not limited to:
 - https://natelandau.com/my-mac-osx-bash_profile/
 - https://gist.github.com/natelandau/10654137
 - http://www.spinen.com
+
+
+
