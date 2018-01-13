@@ -1,12 +1,12 @@
 # Bash Configuration
 
 
-## Install Homebrew
+### Install Homebrew
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-## Install Tools
+### Install Tools
 ```
 brew install thefuck
 brew install tldr
@@ -21,8 +21,8 @@ brew install kubectl
 
 ```
 
+### Install Applications
 ```bash
-# Install Applications
 brew tap caskroom/cask
 brew tap caskroom/versions
 
