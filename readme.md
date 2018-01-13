@@ -1,14 +1,13 @@
 # Bash Configuration
 
 
-
+## Install Homebrew
 ```bash
-# Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
-
-# Install Tools
-
+## Install Tools
+```
 brew install thefuck
 brew install tldr
 brew install z
@@ -24,8 +23,8 @@ brew install kubectl
 
 ```bash
 # Install Applications
-
 brew tap caskroom/cask
+brew tap caskroom/versions
 
 brew cask install docker
 brew cask install microsoft-remote-desktop-beta
@@ -36,15 +35,22 @@ brew cask install quicklook-csv
 brew cask install qlstephen
 brew cask install cheatsheet
 brew cask install epichrome
-brew cask install lastpass
+brew cask install firefox
 brew cask install google-chrome
+brew cask install lastpass
 brew cask install bettertouchtool
 brew cask install google-backup-and-sync
+Brew cask install visual-studio-code-insiders
 
 ```
 
 ```bash
 # Configure Environment
+
+# Allow apps installed from anywhere
+sudo spctl --master-disable
+
+open '/usr/local/Caskroom/lastpass/latest/LastPass Installer'
 
 sudo ./motd.sh
 
@@ -53,6 +59,10 @@ ln -s ~/Documents/git ~/git
 
 cd ~/git
 git clone https://github.com/jwalker343/my-dot-files.git
+
+ln -s ~/git/my-dot-files/.profile ~/.profile
+ln -s ~/git/my-dot-files/.gitignore_global ~/.gitignore_global
+ln -s ~/git/my-dot-files/.gitconfig ~/.gitconfig
 
 
 ```
