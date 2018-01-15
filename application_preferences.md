@@ -180,8 +180,8 @@ Sign into apple ID for app-store and install the following apps:
     - Import base16-Dark.terminal
     - Set base15-Dark as the default
     - Set new windows to open with base16-dark
-    - 
 - Google Backup and Sync
+- Visual Studio Code Settings Sync
  
 
 
