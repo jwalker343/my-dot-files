@@ -77,6 +77,10 @@ Sign into apple ID for app-store and install the following apps:
 - App Exposé = 4 fingers
 - uncheck launchpad gesture
 
+**Date & Time**
+- display the time with seconds
+- Show day of the week
+
 **Sound**
 - Play Feedback when volume is changed
 
@@ -85,15 +89,6 @@ Sign into apple ID for app-store and install the following apps:
 
 **bluetooth**
 - show bluetooth in menu bar
-
-# Other Preferences
-
-**Network Preferences**
-- Create a new IPSec VPN
-    - Show VPN Status in the Menu Bar
-- Click the VPN dropdown in the menu bar
-    - Show Time Connected
-- Click the barrery and choose Show percentage
 
 # Application Preferences
 
@@ -118,18 +113,45 @@ Sign into apple ID for app-store and install the following apps:
     - External Disks
     - CDs
 - Open Finder and Drag the git folder to the left bar
+ 
+### Configure BetterTouchTools
+- Install license
+- Advanced Settings
+    - Launch at startup
+    - uncheck show menu bar
+- Disable SnapAreas feature
+- Use Fn to move windows
+- Gestures
+    - Keyboard Shortcut, Add, Command+L is lock
+    - Keyboard shortcut, Add Command+K send to finder (follow instructions)
+        - add a new shortcut, with Shift+K
+        - Trigger Other Keyboard Shortcut CMD+K
+        - Action: send shortcut to app, search for finder
+        - change shortcut keys to CMD+K
+    - Touchbar > Add Lock Icon with action to lock screen
+
+# UI Preferences
+- Create a new IPSec VPN
+    - Show VPN Status in the Menu Bar
+- Click the VPN dropdown in the menu bar
+    - Show Time Connected
+- Click the battery and choose Show percentage
+- Make the dock contain:
+    - Finder
+    - Chrome
+    - Secret Server
+    - Connectwise
+    - N-able
+    - Code
+    - Outlook
+    - Spark
+    - (spacer)
+    - Trashcan
 
 ### Configure Epichrome with:
 - secret server
 - Connectwise
 - Nable
- 
-### Configure BetterTouchTools
-- Keyboard Shortcut, Add, Command+L is lock
-- Keyboard shortcut, Add Command+K send to finder
-    - (you'll need to add a shortcut for Shift+K first, then set finder (don't switch) and then change the trigger command
-- Settings > Launch at start
-
 
 # Other Apps that need to be installed
 
@@ -140,7 +162,22 @@ Sign into apple ID for app-store and install the following apps:
  
 
 ### Configure:
+- Docker
+- FireFox
+    - Lastpass: Enable Addon
 - Google Chrome
+    - Lastpass: Enable addon
+    - Sign in to chrome
+    - enter encryption passphrase (hint it's: ***********)
+    - Pushbullet: signin & then configure encryption key
+- Microsoft RDP Beta
+    - User Accounts: Add your account
+    - Change to list view
+    - Import Desktops
+- Monosnap
+    - Configure S3 settings
+- Terminal
+    - Import base16-Dark.terminal
 - Lastpass
 - Google Backup and Sync
  
