@@ -25,8 +25,10 @@ brew install kubectl
 ```bash
 brew tap caskroom/cask
 brew tap caskroom/versions
+brew tap caskroom/fonts
 
 brew cask install docker
+brew cask install font-fira-code
 brew cask install microsoft-remote-desktop-beta
 brew cask install qlcolorcode
 brew cask install qlmarkdown

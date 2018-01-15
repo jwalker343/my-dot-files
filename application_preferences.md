@@ -47,7 +47,12 @@ Sign into apple ID for app-store and install the following apps:
 - Require pass after 5 minutes
 - show message: "This Computer is Locked."
 - Allow apps from anywhere
-- Privacy / Do not send diagnostic or crash data
+- Privacy
+    - Analytics
+        - Don't send
+    - Accessibility
+        - allow BetterTouchTools
+        - allow Cheatsheet
 
 **Spotlight**
 - uncheck music movies fonts
@@ -154,12 +159,7 @@ Sign into apple ID for app-store and install the following apps:
 - Nable
 
 # Other Apps that need to be installed
-
 - Anyconnect
-
-
-
- 
 
 ### Configure:
 - Docker
@@ -178,18 +178,12 @@ Sign into apple ID for app-store and install the following apps:
     - Configure S3 settings
 - Terminal
     - Import base16-Dark.terminal
-- Lastpass
+    - Set base15-Dark as the default
+    - Set new windows to open with base16-dark
+    - 
 - Google Backup and Sync
  
 
 
-
-
-
- 
-
-We need to add the terminal profile and set it as default
-
- 
 
 redirect ssh known_host to /dev/nul http://linuxcommando.blogspot.com/2008/10/how-to-disable-ssh-host-key-checking.html
