@@ -159,7 +159,8 @@ Sign into apple ID for app-store and install the following apps:
 - Nable
 
 # Other Apps that need to be installed
-- Anyconnect
+- Anyconnect 
+- GoToAssist Expert [http://www.fastsupport.com/download/repDownload](Here)
 
 ### Configure:
 - Docker
