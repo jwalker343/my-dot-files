@@ -95,6 +95,10 @@ Sign into apple ID for app-store and install the following apps:
 **bluetooth**
 - show bluetooth in menu bar
 
+**Networking**
+- Go update DHCP reservations for your wifi and ethernet nics
+
+
 # Application Preferences
 
 **Finder**
@@ -118,7 +122,7 @@ Sign into apple ID for app-store and install the following apps:
     - External Disks
     - CDs
 - Open Finder and Drag the git folder to the left bar
- 
+
 ### Configure BetterTouchTools
 - Install license
 - Advanced Settings
