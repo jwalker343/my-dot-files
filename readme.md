@@ -81,6 +81,8 @@ echo -e "\t KexAlgorithms +diffie-hellman-group1-sha1" >> ~/.ssh/config
 # [Configure Preferences and Applications](application_preferences.md)
 There are application preferences and mac preferences that cannot be scripted out this is where they are documented
 
+# [Configure Peripherals](peripherals.md)
+Peripherals like keyboard, mouse, printers, etc...
 
 # Credit & Source
 Shamelessly stolen from various online sources including but not limited to:
