@@ -155,12 +155,18 @@ Sign into apple ID for app-store and install the following apps:
 
 ### Configure Epichrome with:
 - secret server
+    - Install Lastpass Addon & epichrome Helper
+    - Install Secret Server Clipboard Utility
 - Connectwise
+    - Install Lastpass Addon & epichrome Helper
 - Nable
+    - Install LastPass Addon & epichrome Helper
+    - Download/Install MSPA Viewer
 
 # Other Apps that need to be installed
 - Anyconnect 
 - GoToAssist Expert [http://www.fastsupport.com/download/repDownload](Here)
+- Microsoft Office 2016 [http://login.microsoftonline.com](Here)
 
 ### Configure:
 - Docker
@@ -183,7 +189,11 @@ Sign into apple ID for app-store and install the following apps:
     - Set new windows to open with base16-dark
 - Google Backup and Sync
 - Visual Studio Code Settings Sync
- 
+- Microsoft Office
+    - Open Word and sign in to activate
+    - Open Excel/PowerPoint/OneNote and accept initialization
+    - Open Outlook and add exchange
+    - Always trust the SSL redirect error
 
 
 

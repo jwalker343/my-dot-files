@@ -45,6 +45,7 @@ brew cask install bettertouchtool
 brew cask install google-backup-and-sync
 Brew cask install visual-studio-code-insiders
 brew cask install chefdk
+brew cask install cisco-spark
 
 ```
 
