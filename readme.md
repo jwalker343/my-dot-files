@@ -18,6 +18,7 @@ brew install git-flow
 brew install nmap
 brew install speedtest_cli
 brew install kubectl
+brew install ipcalc
 
 ```
 
@@ -43,6 +44,7 @@ brew cask install lastpass
 brew cask install bettertouchtool
 brew cask install google-backup-and-sync
 Brew cask install visual-studio-code-insiders
+brew cask install chefdk
 
 ```
 
@@ -54,15 +56,20 @@ sudo spctl --master-disable
 # Install Lastpass addons
 open '/usr/local/Caskroom/lastpass/latest/LastPass Installer'
 
-# make the git directories
+# make user directories
 mkdir ~/Documents/git
+mkdir ~/Documents/chef
+mkdir ~/Documents/kube
+mkdir ~/ssh_keys
 ln -s ~/Documents/git ~/git
+ln -s ~/Documents/chef ~/chef
+ln -s ~/Documents/kube ~/kube
 
 # Clone in this repo
 cd ~/git
 git clone https://github.com/jwalker343/my-dot-files.git
 
-# Link up items
+# Link up preference items
 ln -s ~/git/my-dot-files/.profile ~/.profile
 ln -s ~/git/my-dot-files/.gitignore_global ~/.gitignore_global
 ln -s ~/git/my-dot-files/.gitconfig ~/.gitconfig
