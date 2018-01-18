@@ -303,6 +303,17 @@ function kns {
 }
 
 
+#   check: Check a host and port 
+#   ------------------------------------------------------------
+function check() {
+  if [ $# -eq 0 ] 
+  then
+    echo "No arguments supplied"
+  fi
+
+  nc -vz $1 $2
+}
+
 #   -------------------------------
 #   4.  ALIASES
 #   -------------------------------
@@ -325,7 +336,7 @@ alias f='open -a Finder ./'                 # Opens current directory in MacOS F
 alias myip='curl ipinfo.io'                 # Public facing IP Address
 alias flushdns='dscacheutil -flushcache'    # Flush out the DNS Cache
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
+alias code='/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin/code'
 
 
 # Vagrant

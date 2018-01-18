@@ -19,6 +19,7 @@ brew install nmap
 brew install speedtest_cli
 brew install kubectl
 brew install ipcalc
+brew install telnet
 
 ```
 
@@ -46,6 +47,7 @@ brew cask install google-backup-and-sync
 Brew cask install visual-studio-code-insiders
 brew cask install chefdk
 brew cask install cisco-spark
+brew cask install zterm
 
 ```
 
