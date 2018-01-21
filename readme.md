@@ -48,6 +48,7 @@ Brew cask install visual-studio-code-insiders
 brew cask install chefdk
 brew cask install cisco-spark
 brew cask install zterm
+brew cask install xquartz
 
 ```
 
