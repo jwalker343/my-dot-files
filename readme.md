@@ -49,6 +49,7 @@ brew cask install chefdk
 brew cask install cisco-spark
 brew cask install zterm
 brew cask install xquartz
+brew cask install java8
 
 ```
 
