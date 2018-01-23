@@ -44,13 +44,13 @@ brew cask install google-chrome
 brew cask install lastpass
 brew cask install bettertouchtool
 brew cask install google-backup-and-sync
-Brew cask install visual-studio-code-insiders
+brew cask install visual-studio-code-insiders
 brew cask install chefdk
 brew cask install cisco-spark
 brew cask install zterm
 brew cask install xquartz
 brew cask install java8
-
+brew cask install timing
 ```
 
 ### Configure Environment
