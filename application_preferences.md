@@ -199,6 +199,25 @@ Sign into apple ID for app-store and install the following apps:
     - Open Outlook and add exchange
     - Always trust the SSL redirect error
 
+# Configure Keys and Secrets:
 
+- Create the ~/git/my-dot-files/envvar.secret file with your github key
+    - `export HOMEBREW_GITHUB_API_TOKEN=XXXXXXXXXXXXXXXXX`
+- Copy your ssh key from `~/.ssh/id_rsa` and `~/.ssh/id_rsa.pub`  from old machine
+- Export and move your GPG key over and configure it with git-crypt:
 
-redirect ssh known_host to /dev/nul http://linuxcommando.blogspot.com/2008/10/how-to-disable-ssh-host-key-checking.html
+```bash
+# Old Machine Export
+gpg -a --export >mypubkeys.asc
+gpg -a --export-secret-keys >myprivatekeys.asc
+gpg --export-ownertrust >otrust.txt
+
+# New Machine Import
+gpg --import myprivatekeys.asc
+gpg --import mypubkeys.asc
+gpg -K
+gpg -k
+gpg --import-ownertrust otrust.txt
+
+gpg --list-keys
+```

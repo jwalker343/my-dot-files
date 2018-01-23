@@ -11,6 +11,7 @@
 brew install thefuck
 brew install tldr
 brew install z
+brew install gpg
 brew install bash-completion
 brew install git
 brew install git-crypt
@@ -83,6 +84,7 @@ ln -s ~/git/my-dot-files/.gitconfig ~/.gitconfig
 sudo ./motd.sh
 
 # Enable Sha1 for SSH & Pipe knownhost to /dev/null
+# http://linuxcommando.blogspot.com/2008/10/how-to-disable-ssh-host-key-checking.html
 mkdir ~/.ssh
 echo -e "Host *" >> ~/.ssh/config
 echo -e "\t StrictHostKeyChecking no" >> ~/.ssh/config
