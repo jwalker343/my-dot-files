@@ -52,6 +52,7 @@ brew cask install zterm
 brew cask install xquartz
 brew cask install java8
 brew cask install timing
+brew cask install captain
 ```
 
 ### Configure Environment
