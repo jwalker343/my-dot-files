@@ -8,52 +8,54 @@
 
 ### Install Tools
 ```
-brew install thefuck
-brew install tldr
-brew install z
-brew install gpg
-brew install bash-completion
-brew install git
-brew install git-crypt
-brew install git-flow
-brew install nmap
-brew install speedtest_cli
-brew install kubectl
-brew install ipcalc
-brew install telnet
+brew install thefuck            #Automatically Fix Errors
+brew install tldr               #Shorter Man Pages
+brew install z                  #Shortcut for recent Dirs
+brew install gpg                #Encrypt all the things
+brew install bash-completion    #Because lazy
+brew install git                #Source Control
+brew install git-crypt          #Encrypt files in git
+brew install git-flow           #Better git methodoligies
+brew install nmap               #Network scanning tool
+brew install speedtest_cli      #Speed test from CLI
+brew install kubectl            #Kubernetes
+brew install ipcalc             #CLI IP/subnet calc
+brew install telnet             #telnet client
 
 ```
 
 ### Install Applications
-```bash
-brew tap caskroom/cask
-brew tap caskroom/versions
-brew tap caskroom/fonts
 
-brew cask install docker
-brew cask install font-fira-code
-brew cask install microsoft-remote-desktop-beta
-brew cask install qlcolorcode
-brew cask install qlmarkdown
-brew cask install quicklook-json
-brew cask install quicklook-csv
-brew cask install qlstephen
-brew cask install cheatsheet
-brew cask install epichrome
-brew cask install firefox
-brew cask install google-chrome
-brew cask install lastpass
-brew cask install bettertouchtool
-brew cask install google-backup-and-sync
-brew cask install visual-studio-code-insiders
-brew cask install chefdk
-brew cask install cisco-spark
-brew cask install zterm
-brew cask install xquartz
-brew cask install java8
-brew cask install timing
-brew cask install captain
-brwe cask install kitematic
+```bash
+brew tap caskroom/cask                              #Cask can install applications
+brew tap caskroom/versions                          #         And Older Versions
+brew tap caskroom/fonts                             #         And Fonts
+
+brew cask install docker                            #Containerization Software
+brew cask install font-fira-code                    #Font with Ligatures
+brew cask install microsoft-remote-desktop-beta     #Because Windows
+brew cask install qlcolorcode                       #QuickLook Syntax Highlighting
+brew cask install qlmarkdown                        #          Markdown files
+brew cask install quicklook-json                    #          JSON Files
+brew cask install quicklook-csv                     #          CSV Files
+brew cask install qlstephen                         #          text files w/no ext
+brew cask install cheatsheet                        #Hold Command to get Shortcuts
+brew cask install epichrome                         #Make websites like apps
+brew cask install firefox                           #Because safari sucks
+brew cask install google-chrome                     #Because firefox sucks
+brew cask install lastpass                          #Password Manager
+brew cask install bettertouchtool                   #Customize mouse, keyboard, touchbar
+brew cask install google-backup-and-sync            #Google Drive Replacement
+brew cask install visual-studio-code-insiders       #Lightweight code editor
+brew cask install chefdk                            #Chef, Knife toolset
+brew cask install cisco-spark                       #Collaboration
+brew cask install zterm                             #Cisco Console Connections
+brew cask install xquartz                           #x11 forwarding thingy for mac
+brew cask install java8                             #Unfortunately, java
+brew cask install timing                            #Time Tracking App
+brew cask install captain                           #(eval) container management menubar 
+brew cask install kitematic                         #Think Client Container Management
+brew cask install etcher                            #Bootable USB drive Maker
 ```
 
 ### Configure Environment
