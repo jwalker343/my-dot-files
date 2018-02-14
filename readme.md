@@ -8,54 +8,54 @@
 
 ### Install Tools
 ```
-brew install thefuck            #Automatically Fix Errors
-brew install tldr               #Shorter Man Pages
-brew install z                  #Shortcut for recent Dirs
-brew install gpg                #Encrypt all the things
-brew install bash-completion    #Because lazy
-brew install git                #Source Control
-brew install git-crypt          #Encrypt files in git
-brew install git-flow           #Better git methodoligies
-brew install nmap               #Network scanning tool
-brew install speedtest_cli      #Speed test from CLI
-brew install kubectl            #Kubernetes
-brew install ipcalc             #CLI IP/subnet calc
-brew install telnet             #telnet client
-
+brew install thefuck            # Automatically Fix Errors
+brew install tldr               # Shorter Man Pages
+brew install z                  # Shortcut for recent Dirs
+brew install gpg                # Encrypt all the things
+brew install bash-completion    # Because lazy
+brew install git                # Source Control
+brew install git-crypt          # Encrypt files in git
+brew install git-flow           # Better git methodoligies
+brew install nmap               # Network scanning tool
+brew install speedtest_cli      # Speed test from CLI
+brew install kubectl            # Kubernetes
+brew install ipcalc             # CLI IP/subnet calc
+brew install telnet             # telnet client
+brew install azure-cli		# Azure Command Line Client
 ```
 
 ### Install Applications
 
 ```bash
-brew tap caskroom/cask                              #Cask can install applications
-brew tap caskroom/versions                          #         And Older Versions
-brew tap caskroom/fonts                             #         And Fonts
+brew tap caskroom/cask                              # Cask can install applications
+brew tap caskroom/versions                          #          And Older Versions
+brew tap caskroom/fonts                             #          And Fonts
 
-brew cask install docker                            #Containerization Software
-brew cask install font-fira-code                    #Font with Ligatures
-brew cask install microsoft-remote-desktop-beta     #Because Windows
-brew cask install qlcolorcode                       #QuickLook Syntax Highlighting
-brew cask install qlmarkdown                        #          Markdown files
-brew cask install quicklook-json                    #          JSON Files
-brew cask install quicklook-csv                     #          CSV Files
-brew cask install qlstephen                         #          text files w/no ext
-brew cask install cheatsheet                        #Hold Command to get Shortcuts
-brew cask install epichrome                         #Make websites like apps
-brew cask install firefox                           #Because safari sucks
-brew cask install google-chrome                     #Because firefox sucks
-brew cask install lastpass                          #Password Manager
-brew cask install bettertouchtool                   #Customize mouse, keyboard, touchbar
-brew cask install google-backup-and-sync            #Google Drive Replacement
-brew cask install visual-studio-code-insiders       #Lightweight code editor
-brew cask install chefdk                            #Chef, Knife toolset
-brew cask install cisco-spark                       #Collaboration
-brew cask install zterm                             #Cisco Console Connections
-brew cask install xquartz                           #x11 forwarding thingy for mac
-brew cask install java8                             #Unfortunately, java
-brew cask install timing                            #Time Tracking App
-brew cask install captain                           #(eval) container management menubar 
-brew cask install kitematic                         #Think Client Container Management
-brew cask install etcher                            #Bootable USB drive Maker
+brew cask install docker                            # Containerization Software
+brew cask install font-fira-code                    # Font with Ligatures
+brew cask install microsoft-remote-desktop-beta     # Because Windows
+brew cask install qlcolorcode                       # QuickLook Syntax Highlighting
+brew cask install qlmarkdown                        #           Markdown files
+brew cask install quicklook-json                    #           JSON Files
+brew cask install quicklook-csv                     #           CSV Files
+brew cask install qlstephen                         #           text files w/no ext
+brew cask install cheatsheet                        # Hold Command to get Shortcuts
+brew cask install epichrome                         # Make websites like apps
+brew cask install firefox                           # Because safari sucks
+brew cask install google-chrome                     # Because firefox sucks
+brew cask install lastpass                          # Password Manager
+brew cask install bettertouchtool                   # Customize mouse, keyboard, touchbar
+brew cask install google-backup-and-sync            # Google Drive Replacement
+brew cask install visual-studio-code-insiders       # Lightweight code editor
+brew cask install chefdk                            # Chef, Knife toolset
+brew cask install cisco-spark                       # Collaboration & Messaging
+brew cask install zterm                             # Cisco Console Connections
+brew cask install xquartz                           # x11 forwarding thingy for mac
+brew cask install java8                             # Unfortunately, java
+brew cask install timing                            # Time Tracking App
+brew cask install captain                           # (eval) container management menubar 
+brew cask install kitematic                         # Think Client Container Management
+brew cask install etcher                            # Bootable USB drive Maker
 ```
 
 ### Configure Environment
