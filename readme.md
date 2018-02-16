@@ -56,6 +56,7 @@ brew cask install timing                            # Time Tracking App
 brew cask install captain                           # (eval) container management menubar 
 brew cask install kitematic                         # Think Client Container Management
 brew cask install etcher                            # Bootable USB drive Maker
+brew cask install angry-ip-scanner		    # Scan Local IP Networks
 ```
 
 ### Configure Environment
