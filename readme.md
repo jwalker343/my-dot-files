@@ -21,7 +21,8 @@ brew install speedtest_cli      # Speed test from CLI
 brew install kubectl            # Kubernetes
 brew install ipcalc             # CLI IP/subnet calc
 brew install telnet             # telnet client
-brew install azure-cli		# Azure Command Line Client
+brew install azure-cli          # Azure Command Line Client
+brwe install hr                 # <hr /> for terminal
 ```
 
 ### Install Applications

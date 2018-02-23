@@ -74,6 +74,7 @@ Sign into apple ID for app-store and install the following apps:
 - delay is short
 - Shortcuts
     - remove show desktop and dashboard
+    - Enable Full Keyboard Access "All Controls"
 
 **Trackpad**
 - Uncheck Scroll Direction Natural

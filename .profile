@@ -141,6 +141,8 @@ export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config:$(ls ~/kube/*.* | paste -s -d: 
 #HOMEBREW_GITHUB_API_TOKEN
 source ~/git/my-dot-files/envvar.secret
 
+# Enable Shell Options
+shopt -s cdspell
 
 #   source sysadmin-docker-tools repo
 #   ------------------------------------------------------------
@@ -318,6 +320,7 @@ function check() {
 #   4.  ALIASES
 #   -------------------------------
 
+alias hr="hr \~ && hr = && hr \~"
 
 alias ls="ls -hpG"
 alias lsl="ls -alhpG"
