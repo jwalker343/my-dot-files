@@ -132,8 +132,8 @@ Sign into apple ID for app-store and install the following apps:
 - Disable SnapAreas feature
 - Use Fn to move windows
 - Gestures
-    - Keyboard Shortcut, Add, Command+L is lock
-    - Keyboard shortcut, Add Command+K send to finder (follow instructions)
+    - Keyboard shortcut, Add, Command+L is lock
+    - Keyboard shortcut, Add, Command+K send to finder (follow instructions)
         - add a new shortcut, with Shift+K
         - Trigger Other Keyboard Shortcut CMD+K
         - Action: send shortcut to app, search for finder
