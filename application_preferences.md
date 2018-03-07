@@ -138,11 +138,12 @@ Sign into apple ID for app-store and install the following apps:
         - Trigger Other Keyboard Shortcut CMD+K
         - Action: send shortcut to app, search for finder
         - change shortcut keys to CMD+K
-    - Keyboard shortcut, Add, Control+Shift+P to Capture Screenshot
+    - Keyboard shortcut, Add, Control+Shift+P to Capture Interactive Screenshot
         - add a new shortcut, with Control+Shift+P
         - Trigger Predefined Action: Capture Screenshot (Configurable)
             - Only copy to clipboard
             - After Capture: Open screenshot in Preview.
+        - Remember, Use space to capture an entire window.
     - Touchbar > Add Lock Icon with action to lock screen
 
 # UI Preferences
