@@ -359,7 +359,7 @@ alias kpods="kubectl get pods"
 alias ksvc="kubectl get services"
 alias kdep="kubectl get deployments"
 alias kci="kubectl cluster-info; kubectl get nodes; kubectl get namespaces"
-
+alias kwho="kubectl config current-context"
 
 
 #Get current default namespace

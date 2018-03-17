@@ -22,7 +22,7 @@ brew install kubectl            # Kubernetes
 brew install ipcalc             # CLI IP/subnet calc
 brew install telnet             # telnet client
 brew install azure-cli          # Azure Command Line Client
-brwe install hr                 # <hr /> for terminal
+brew install hr                 # <hr /> for terminal
 ```
 
 ### Install Applications
@@ -85,6 +85,9 @@ git clone https://github.com/jwalker343/my-dot-files.git
 ln -s ~/git/my-dot-files/.profile ~/.profile
 ln -s ~/git/my-dot-files/.gitignore_global ~/.gitignore_global
 ln -s ~/git/my-dot-files/.gitconfig ~/.gitconfig
+
+# Install Language Addons
+sudo gem install rubocop
 
 # install the login banner
 sudo ./motd.sh
