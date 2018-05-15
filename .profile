@@ -337,7 +337,7 @@ alias .3='cd ../../../'                     # Go back 3 directory levels
 alias f='open -a Finder ./'                 # Opens current directory in MacOS Finder
 
 alias myip='curl ipinfo.io'                 # Public facing IP Address
-alias flushdns='dscacheutil -flushcache'    # Flush out the DNS Cache
+alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache;echo "Flushed the DNS"'    # Flush out the DNS Cache
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias code='/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin/code'
 
