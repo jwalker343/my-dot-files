@@ -297,7 +297,7 @@ ii() {
 source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 
 
-#   aa:  do the thing
+#   kns: Set default kubernetes namespace
 #   -------------------------------------------------------------------
 function kns {
   echo "Setting kubectl default namespace to $1"
@@ -314,6 +314,31 @@ function check() {
   fi
 
   nc -vz $1 $2
+}
+
+#   route: Manage routes on Mac OS X
+#   ------------------------------------------------------------
+function route() {
+  if [ $# -eq 0 ] 
+  then
+    echo "No arguments supplied"
+  fi
+
+  shopt -s nocasematch
+  if [["$1" == "PRINT"]]; then
+    netstat -nr
+    shopt -u nocasematch
+    return 0
+  fi
+  shopt -u nocasematch
+
+  shopt -s nocasematch
+  if [["$1" == "ADD"]]; then
+    sudo route add $2 $3
+    shopt -u nocasematch
+    return 0
+  fi
+  shopt -u nocasematch
 }
 
 #   -------------------------------

@@ -58,6 +58,7 @@ brew cask install captain                           # (eval) container managemen
 brew cask install kitematic                         # Think Client Container Management
 brew cask install etcher                            # Bootable USB drive Maker
 brew cask install angry-ip-scanner		    # Scan Local IP Networks
+brew cask install kaleidoscope                      # Diff tool
 ```
 
 ### Configure Environment
