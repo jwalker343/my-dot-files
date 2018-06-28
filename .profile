@@ -355,6 +355,11 @@ function route() {
 #   -------------------------------
 
 alias watch="watch "                        # Fix issue with watch alias computation
+alias watch1="watch -n 1 "                  # Watch in 1s counters
+alias watch3="watch -n 3 "                  # Watch in 3s counters
+alias watch5="watch -n 5 "                  # Watch in 5s counters
+
+
 alias hr="hr \~ && hr = && hr \~"
 
 alias ls="ls -hpG"
