@@ -316,29 +316,25 @@ function check() {
   nc -vz $1 $2
 }
 
-#   route: Manage routes on Mac OS X
+#   route: manage routes
 #   ------------------------------------------------------------
 function route() {
   if [ $# -eq 0 ] 
   then
     echo "No arguments supplied"
-  fi
-
-  shopt -s nocasematch
-  if [["$1" == "PRINT"]]; then
-    netstat -nr
-    shopt -u nocasematch
     return 0
   fi
-  shopt -u nocasematch
 
-  shopt -s nocasematch
-  if [["$1" == "ADD"]]; then
-    sudo route add $2 $3
-    shopt -u nocasematch
-    return 0
+  if [ $1 == "print" ]
+  then
+    netstat -nrf inet
   fi
-  shopt -u nocasematch
+
+  if [ $1 == "add" ] && [ $# -eq 3 ]
+  then
+    echo "route -n add -net $2 $3"
+    command sudo route -n add -net $2 $3
+  fi
 }
 
 #   -------------------------------
