@@ -305,6 +305,19 @@ function kns {
 }
 
 
+#   kdashboard: Proxy Dashboard to localhost and provide URL
+#   -------------------------------------------------------------------
+function kdashboard {
+  echo "Starting Kubectl Proxy"
+  kubectl proxy &
+  echo "Opening Dashboard, URL:"
+  echo "http://localhost:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard:/proxy"
+  sleep 1
+  open "http://localhost:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard:/proxy"
+  fg
+}
+
+
 #   check: Check a host and port 
 #   ------------------------------------------------------------
 function check() {
