@@ -23,6 +23,7 @@ brew install ipcalc             # CLI IP/subnet calc
 brew install telnet             # telnet client
 brew install azure-cli          # Azure Command Line Client
 brew install hr                 # <hr /> for terminal
+brew install watch              # Watch a command output over time
 ```
 
 ### Install Applications
