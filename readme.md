@@ -18,10 +18,12 @@ brew install git-crypt          # Encrypt files in git
 brew install git-flow           # Better git methodoligies
 brew install nmap               # Network scanning tool
 brew install speedtest_cli      # Speed test from CLI
-brew install kubectl            # Kubernetes
+brew install kubernetes-cli     # Kubernetes
+brew install kubernetes-helm    # Kubernetes Helm Client
 brew install ipcalc             # CLI IP/subnet calc
 brew install telnet             # telnet client
 brew install azure-cli          # Azure Command Line Client
+brew install awscli             # AWS Command Line Client
 brew install hr                 # <hr /> for terminal
 brew install watch              # Watch a command output over time
 ```
@@ -58,8 +60,10 @@ brew cask install timing                            # Time Tracking App
 brew cask install captain                           # (eval) container management menubar 
 brew cask install kitematic                         # Think Client Container Management
 brew cask install etcher                            # Bootable USB drive Maker
-brew cask install angry-ip-scanner		    # Scan Local IP Networks
+brew cask install angry-ip-scanner                  # Scan Local IP Networks
 brew cask install kaleidoscope                      # Diff tool
+brew cask install sql-operations-studio             # Like MySQL Workbench for sql servers
+brew cask install mysqlworkbench                    # Manage MySQL Servers
 ```
 
 ### Configure Environment
@@ -114,6 +118,3 @@ Shamelessly stolen from various online sources including but not limited to:
 - https://natelandau.com/my-mac-osx-bash_profile/
 - https://gist.github.com/natelandau/10654137
 - http://www.spinen.com
-
-
-
