@@ -26,6 +26,7 @@ brew install azure-cli          # Azure Command Line Client
 brew install awscli             # AWS Command Line Client
 brew install hr                 # <hr /> for terminal
 brew install watch              # Watch a command output over time
+brew install parallel		# GNU Parallel / execute jobs in parallel
 ```
 
 ### Install Applications
