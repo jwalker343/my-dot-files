@@ -42,49 +42,72 @@ FROWNY="${RED}:(${NORMAL}"
 
 
 function git-branch-name {
- git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3,4
+  git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3,4
 }
 
 
 function git-branch-prompt {
- local branch=$(git-branch-name)
+  local branch=$(git-branch-name)
 
- if [ $branch ]; then
-   local branch_color="${PURPLE}"     # Default to green
-   local ahead_behind=""             # Default to empty ahead/behind numbers
+  if [ $branch ]; then
+    local branch_color="${PURPLE}"     # Default to green
+    local ahead_behind=""             # Default to empty ahead/behind numbers
 
-   # Check to see if there are any staged files
-   if git status | grep --quiet "Changes to be committed:"; then
-     local branch_color="${GREEN}";
-   # Check to see if there are any modified files
-   elif git status | grep --quiet "Changes not staged for commit:"; then
-     local branch_color="${RED}";
-   # Check to see if there are any untracked files
-   elif git status | grep --quiet "Untracked files:"; then
-     local branch_color="${YELLOW}";
-   fi
+    # Check to see if there are any staged files
+    if git status | grep --quiet "Changes to be committed:"; then
+      local branch_color="${GREEN}";
+    # Check to see if there are any modified files
+    elif git status | grep --quiet "Changes not staged for commit:"; then
+      local branch_color="${RED}";
+    # Check to see if there are any untracked files
+    elif git status | grep --quiet "Untracked files:"; then
+      local branch_color="${YELLOW}";
+    fi
 
-   local branch_rev=$(git rev-parse --abbrev-ref HEAD 2>/dev/null);
+    local branch_rev=$(git rev-parse --abbrev-ref HEAD 2>/dev/null);
 
-   if [ "HEAD" != "${branch_rev}" ]; then
-     local remote=$(git config branch.${branch_rev}.remote 2>/dev/null);
-     local merge_branch=$(git config branch.${branch_rev}.merge 2>/dev/null| cut -d / -f 3);
-     local count=$(git rev-list --left-right --count ${branch_rev}...$remote/$merge_branch 2>/dev/null| tr -s '\t' '|');
+    if [ "HEAD" != "${branch_rev}" ]; then
+      local remote=$(git config branch.${branch_rev}.remote 2>/dev/null);
+      local merge_branch=$(git config branch.${branch_rev}.merge 2>/dev/null| cut -d / -f 3);
+      local count=$(git rev-list --left-right --count ${branch_rev}...$remote/$merge_branch 2>/dev/null| tr -s '\t' '|');
 
-     if [ "${count}" -a "0|0" != "${count}" ]; then
-       local ahead="${GREEN}$(echo ${count} | cut -d\| -f1)${NORMAL}";
-       local behind="${RED}$(echo ${count} | cut -d\| -f2)${NORMAL}";
+      if [ "${count}" -a "0|0" != "${count}" ]; then
+        local ahead="${GREEN}$(echo ${count} | cut -d\| -f1)${NORMAL}";
+        local behind="${RED}$(echo ${count} | cut -d\| -f2)${NORMAL}";
 
-       local ahead_behind=" ${ahead}|${behind}";
-     fi
-   fi
+        local ahead_behind=" ${ahead}|${behind}";
+      fi
+    fi
 
-   echo "${branch_color}[${branch}${ahead_behind}${branch_color}]${NORMAL} ";
-   #printf "${branch_color}[${branch}${ahead_behind}${branch_color}]${NORMAL} ";
- fi
+    echo "${branch_color}[${branch}${ahead_behind}${branch_color}]${NORMAL} ";
+    #printf "${branch_color}[${branch}${ahead_behind}${branch_color}]${NORMAL} ";
+  fi
 }
 
 
+function gitsquash {
+
+  local squashcount=${1:-4}
+  local gitbranch=$(git-branch-name)
+  LNORMAL="\033[0m"
+  LRED="\033[1;31m"
+  LCYAN="\033[0;36m"
+  
+  # Alert the user if they are not in a git repo
+  if [ -z $gitbranch ]; then
+    echo -e "$LRED You are not in a git repository."
+    return
+  fi
+
+  # Provide guidance to the user
+  echo -e "$LCYAN ----------------------------------------------------------------------"
+  echo -e "$LCYAN Once your squash is complete push with the following:\n" 
+  echo -e "$LRED    git push origin +$gitbranch \n"
+  echo -e "$LCYAN ----------------------------------------------------------------------"
+
+  git rebase -i origin/$gitbranch~$squashcount $gitbranch
+
+}
 
 
 
