@@ -26,8 +26,9 @@ brew install azure-cli          # Azure Command Line Client
 brew install awscli             # AWS Command Line Client
 brew install hr                 # <hr /> for terminal
 brew install watch              # Watch a command output over time
-brew install parallel		# GNU Parallel / execute jobs in parallel
-brew install diff-so-fancy	# Better diff tolls for GIT
+brew install parallel           # GNU Parallel / execute jobs in parallel
+brew install diff-so-fancy      # Better diff tolls for GIT
+brew install httpie             # Curl but with colors!
 ```
 
 ### Install Applications
