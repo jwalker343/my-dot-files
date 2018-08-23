@@ -376,6 +376,7 @@ function route() {
 #   -------------------------------
 #   6.  ALIASES
 #   -------------------------------
+alias please="fuck"			    # Make fuck more pleasant
 
 alias watch="watch "                        # Fix issue with watch alias computation
 alias watch1="watch -n 1 "                  # Watch in 1s counters
