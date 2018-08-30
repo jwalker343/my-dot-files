@@ -30,6 +30,8 @@ brew install parallel           # GNU Parallel / execute jobs in parallel
 brew install diff-so-fancy      # Better diff tolls for GIT
 brew install httpie             # Curl but with colors!
 brew install google-cloud-sdk	# gcloud SDK
+brew install node               # node
+brew insatll yarn               # yarn for node
 ```
 
 ### Install Applications
@@ -72,6 +74,10 @@ brew cask install mysqlworkbench                    # Manage MySQL Servers
 
 ### Configure Environment
 ```bash
+# Customize vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+
 # Allow apps installed from anywhere
 sudo spctl --master-disable
 
