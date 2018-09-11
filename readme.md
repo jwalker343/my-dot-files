@@ -32,6 +32,8 @@ brew install httpie             # Curl but with colors!
 brew install google-cloud-sdk	# gcloud SDK
 brew install node               # node
 brew insatll yarn               # yarn for node
+brew install fzf                # fuzzy completion
+brew install kubectx --with-short-names # Interactive kube context switching
 ```
 
 ### Install Applications
