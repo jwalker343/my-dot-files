@@ -185,6 +185,10 @@ Sign into apple ID for app-store and install the following apps:
 - Microsoft RDP Beta
     - User Accounts: Add your account
     - Change to list view
+    - Export Desktops on old machine by:
+        - Highlight all desktops
+        - Right click > Export
+        - choose a folder to store them in
     - Import Desktops
 - Monosnap
     - Configure S3 settings
