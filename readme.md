@@ -20,6 +20,8 @@ brew install nmap               # Network scanning tool
 brew install speedtest_cli      # Speed test from CLI
 brew install kubernetes-cli     # Kubernetes
 brew install kubernetes-helm    # Kubernetes Helm Client
+brew install helmfile           # Declarative Helm Installations
+brew install kustomize          # Structured kubernetes yaml files
 brew install ipcalc             # CLI IP/subnet calc
 brew install telnet             # telnet client
 brew install azure-cli          # Azure Command Line Client
