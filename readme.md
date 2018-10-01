@@ -106,8 +106,9 @@ ln -s ~/git/my-dot-files/.profile ~/.profile
 ln -s ~/git/my-dot-files/.gitignore_global ~/.gitignore_global
 ln -s ~/git/my-dot-files/.gitconfig ~/.gitconfig
 
-# Install Language Addons
+# Install Addons
 sudo gem install rubocop
+helm plugin install https://github.com/databus23/helm-diff
 
 # install the login banner
 sudo ./motd.sh
