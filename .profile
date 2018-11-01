@@ -25,16 +25,10 @@ RED="\[\033[1;31m\]"
 RESET="\[\017\]"
 WHITE="\[\033[1;37m\]"
 YELLOW="\[\033[1;33m\]"
-
-
-
+BLUE="\[\033[1;34m\]"
 
 SMILEY="${GREEN}:)${NORMAL}"
 FROWNY="${RED}:(${NORMAL}"
-
-
-
-
 
 #   -------------------------------
 #   2.  GIT INTEGRATION
@@ -80,7 +74,6 @@ function git-branch-prompt {
     fi
 
     echo "${branch_color}[${branch}${ahead_behind}${branch_color}]${NORMAL} ";
-    #printf "${branch_color}[${branch}${ahead_behind}${branch_color}]${NORMAL} ";
   fi
 }
 
@@ -121,21 +114,32 @@ function gitsquash {
 __prompt_command() {
     local EXIT="$?"             # This needs to be first
 
-
     export PROMPTSMILE="${SMILEY}"
     if [ $EXIT = 0 ]; then 
       export PROMPTSMILE="${SMILEY} " 
     else 
       export PROMPTSMILE="${FROWNY} " 
     fi
-
-
-
-    PS1="${RESET}${CYAN}\W${NORMAL} $(git-branch-prompt)${PROMPTSMILE}${NORMAL}"
+    
+    PS1="$(__kube_ps1)${RESET}${CYAN}\W${NORMAL} $(git-branch-prompt)${PROMPTSMILE}${NORMAL}"
 }
 
-#PROMPT_COMMAND="PS1=\"${RESET}${CYAN}\W${NORMAL} \`${PROMPT_GIT_STATUS}\`\`${PROMPT_PREVIOUS_STATUS}\`${NORMAL}\";"
-PROMPT_COMMAND=__prompt_command
+# This lets us enable and disable kube_ps1
+KPS1_DISABLE_PATH="${HOME}/.kube/kube-ps1/disabled"
+
+__kube_ps1() {
+  if [[ ! -f "${KPS1_DISABLE_PATH}" ]]; then
+    KPS1_IMG=$'\xE2\x8E\x88 '
+    KPS1_CTX="$(k config current-context | cut -c1-12 2>/dev/null)..."
+    KPS1_NS="$(k config view --minify --output 'jsonpath={..namespace}' 2>/dev/null)"
+
+    echo "${WHITE}[${BLUE}${KPS1_IMG}${CYAN}${KPS1_CTX}${WHITE} | ${PURPLE}${KPS1_NS}${WHITE} ]\n"
+  fi 
+}
+
+# Set the Command Prompt and Title to contain the current working directory.
+PROMPT_TITLE='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007" '
+PROMPT_COMMAND="${PROMPT_TITLE}; __prompt_command"
 
 
 #   Set Paths
@@ -158,7 +162,7 @@ export GREP_OPTIONS='--color=auto'
 export GREP_COLORS
 
 # Set kubeconfig directory and file list
-export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config:$(ls ~/kube/*.* | paste -s -d: -)
+export KUBECONFIG=$(ls ~/kube/*.* | paste -s -d: -)
 
 # export secret vars
 #HOMEBREW_GITHUB_API_TOKEN
@@ -224,7 +228,7 @@ fi
 #   copy-key: to copy your public SSH key for pasting
 #   ------------------------------------------------------------
 function copy-key {
- cat ~/.ssh/id_rsa.pub | pbcopy && echo "Key copied to clipboard"
+  cat ~/.ssh/id_rsa.pub | pbcopy && echo "Key copied to clipboard"
 }
 
 
@@ -320,14 +324,6 @@ ii() {
 source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 
 
-#   kns: Set default kubernetes namespace
-#   -------------------------------------------------------------------
-function kns {
-  echo "Setting kubectl default namespace to $1"
-  kubectl config set-context $(kubectl config current-context) --namespace=$1
-}
-
-
 #   kdashboard: Proxy Dashboard to localhost and provide URL
 #   -------------------------------------------------------------------
 function kdashboard {
@@ -372,6 +368,119 @@ function route() {
     command sudo route -n add -net $2 $3
   fi
 }
+
+
+
+#   kpods: Get Pod List or describe pod
+#          source: https://github.com/shawnxlw/kubernetes-tools
+#   ------------------------------------------------------------
+function kpod() {
+  # parse arguments
+  while [ "$1" != "" ]; do
+    case $1 in
+      -n | --namespace ) shift
+        get_pods "-n $1"
+        ;;
+      -a | --all) shift
+        get_pods "--all-namespaces"
+        ;;
+      * ) describe_pod "$1"
+    esac
+    shift
+  done
+
+  # get pods in current namespace if no arguments specified
+  if [ $# -eq 0 ]; then get_pods; fi
+}
+
+# get pods helper for kpod
+get_pods() {
+  kubectl get pod $1
+  return
+}
+
+# describe pods helper for kpod
+describe_pod() {
+  kubectl describe pod $1
+  return
+}
+
+
+
+#   kcopy: Copy bustbox into kubernetes pod
+#          source: https://github.com/shawnxlw/kubernetes-tools
+#   ------------------------------------------------------------
+BUSY_BOX_URL="https://busybox.net/downloads/binaries/1.27.1-i686/busybox"
+BUSY_BOX_SHA="b51b9328eb4e60748912e1c1867954a5cf7e9d5294781cae59ce225ed110523c"
+BUSY_BOX_PATH="/tmp/${BUSY_BOX_SHA}"
+
+function kcopy() {
+  # parse arguments
+  while [ "$1" != "" ]; do
+    case $1 in
+      -n | --namespace ) shift
+        copy_tools $1
+        ;;
+      * ) copy_tools $1
+    esac
+    shift
+  done
+}
+
+function copy_tools() {
+  # check/download busybox
+  get_busybox
+  # checkout shasum
+  echo "${BUSY_BOX_SHA}  ${BUSY_BOX_PATH}/busybox" | shasum -ca 256 - > /dev/null
+
+  pod=$1
+  PS3="Please select a container:"
+  # exit if pod not found
+  if ! kubectl get pod $pod > /dev/null; then exit 1; fi
+
+  containers=($(kubectl get pod $pod -o jsonpath='{.spec.containers[*].name}'))
+
+  # if there is only one container, get a shell
+  if [[ ${#containers[@]} -eq 1 ]] ; then
+    selected_container=$containers
+  else
+    # if there are more than one container, prompt select
+    select container in "${containers[@]}"
+    do
+      selected_container=$container
+      break
+    done
+  fi
+
+  echo -e "\nCopying tools to container $selected_container...\n"
+  kubectl cp $BUSY_BOX_PATH/busybox $namespace/$pod:/tmp -c $selected_container
+  # setup busybox
+  kubectl exec $pod -c $selected_container -ti -- sh -c "chmod 755 /tmp/busybox && /tmp/busybox --install /usr/bin"
+
+  echo -e "\nGetting you a shell in $selected_container...\n"
+  # if bash doesn't work, try sh
+  kubectl exec $pod -c $selected_container -ti bash 2>/dev/null || kubectl exec $pod -c $selected_container -ti sh
+  exit 0
+}
+
+# if the busybox directory doesn't exist, download busybox
+function get_busybox() {
+  if [[ ! -d $BUSY_BOX_PATH ]]; then
+    echo "No busybox present, downloading..."
+    mkdir $BUSY_BOX_PATH && cd $BUSY_BOX_PATH
+    curl -sSo busybox $BUSY_BOX_URL
+  fi
+}
+
+function kubeon() {
+  rm -f -- "${KPS1_DISABLE_PATH}"
+}
+
+function kubeoff() {
+  mkdir -p -- "$(dirname "${KPS1_DISABLE_PATH}")"
+  touch -- "${KPS1_DISABLE_PATH}"
+}
+
 
 #   -------------------------------
 #   6.  ALIASES
@@ -419,12 +528,12 @@ alias vm="ssh vagrant@127.0.0.1 -p 2222"
 
 # Kubectl & Kubernetes
 alias k="kubectl"
-alias kpods="kubectl get pods"
+alias kpods=kpod
 alias ksvc="kubectl get services"
 alias kdep="kubectl get deployments"
 alias kci="kubectl cluster-info; kubectl get nodes; kubectl get namespaces"
 alias kwho="kubectl config current-context"
-
+alias kaf="kubectl apply -f"
 
 #Get current default namespace
 #k config get-contexts | grep "*" | awk '{print $5}'
