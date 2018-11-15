@@ -31,7 +31,7 @@ brew install watch                      # Watch a command output over time
 brew install parallel                   # GNU Parallel / execute jobs in parallel
 brew install diff-so-fancy              # Better diff tolls for GIT
 brew install httpie                     # Curl but with colors!
-brew install google-cloud-sdk	          # gcloud SDK
+brew install google-cloud-sdk           # gcloud SDK
 brew install node                       # node
 brew insatll yarn                       # yarn for node
 brew install fzf                        # fuzzy completion
