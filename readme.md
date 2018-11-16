@@ -105,6 +105,7 @@ git clone https://github.com/jwalker343/my-dot-files.git
 ln -s ~/git/my-dot-files/.profile ~/.profile
 ln -s ~/git/my-dot-files/.gitignore_global ~/.gitignore_global
 ln -s ~/git/my-dot-files/.gitconfig ~/.gitconfig
+ln -s ~/git/my-dot-files/.inputrc ~/.inputrc
 
 # Install Addons
 sudo gem install rubocop
