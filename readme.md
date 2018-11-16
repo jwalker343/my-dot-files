@@ -7,34 +7,34 @@
 ```
 
 ### Install Tools
-```
-brew install thefuck            # Automatically Fix Errors
-brew install tldr               # Shorter Man Pages
-brew install z                  # Shortcut for recent Dirs
-brew install gpg                # Encrypt all the things
-brew install bash-completion    # Because lazy
-brew install git                # Source Control
-brew install git-crypt          # Encrypt files in git
-brew install git-flow           # Better git methodoligies
-brew install nmap               # Network scanning tool
-brew install speedtest_cli      # Speed test from CLI
-brew install kubernetes-cli     # Kubernetes
-brew install kubernetes-helm    # Kubernetes Helm Client
-brew install helmfile           # Declarative Helm Installations
-brew install kustomize          # Structured kubernetes yaml files
-brew install ipcalc             # CLI IP/subnet calc
-brew install telnet             # telnet client
-brew install azure-cli          # Azure Command Line Client
-brew install awscli             # AWS Command Line Client
-brew install hr                 # <hr /> for terminal
-brew install watch              # Watch a command output over time
-brew install parallel           # GNU Parallel / execute jobs in parallel
-brew install diff-so-fancy      # Better diff tolls for GIT
-brew install httpie             # Curl but with colors!
-brew install google-cloud-sdk	# gcloud SDK
-brew install node               # node
-brew insatll yarn               # yarn for node
-brew install fzf                # fuzzy completion
+```bash
+brew install thefuck                    # Automatically Fix Errors
+brew install tldr                       # Shorter Man Pages
+brew install z                          # Shortcut for recent Dirs
+brew install gpg                        # Encrypt all the things
+brew install bash-completion            # Because lazy
+brew install git                        # Source Control
+brew install git-crypt                  # Encrypt files in git
+brew install git-flow                   # Better git methodoligies
+brew install nmap                       # Network scanning tool
+brew install speedtest_cli              # Speed test from CLI
+brew install kubernetes-cli             # Kubernetes
+brew install kubernetes-helm            # Kubernetes Helm Client
+brew install helmfile                   # Declarative Helm Installations
+brew install kustomize                  # Structured kubernetes yaml files
+brew install ipcalc                     # CLI IP/subnet calc
+brew install telnet                     # telnet client
+brew install azure-cli                  # Azure Command Line Client
+brew install awscli                     # AWS Command Line Client
+brew install hr                         # <hr /> for terminal
+brew install watch                      # Watch a command output over time
+brew install parallel                   # GNU Parallel / execute jobs in parallel
+brew install diff-so-fancy              # Better diff tolls for GIT
+brew install httpie                     # Curl but with colors!
+brew install google-cloud-sdk           # gcloud SDK
+brew install node                       # node
+brew insatll yarn                       # yarn for node
+brew install fzf                        # fuzzy completion
 brew install kubectx --with-short-names # Interactive kube context switching
 ```
 
