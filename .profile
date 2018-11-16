@@ -529,6 +529,7 @@ alias vm="ssh vagrant@127.0.0.1 -p 2222"
 # Kubectl & Kubernetes
 alias k="kubectl"
 alias kpods=kpod
+alias kpdos=kpod
 alias ksvc="kubectl get services"
 alias kdep="kubectl get deployments"
 alias kci="kubectl cluster-info; kubectl get nodes; kubectl get namespaces"
