@@ -13,9 +13,6 @@ Sign into apple ID for app-store and install the following apps:
 
 # Mac System Preferences
 **General**
-- Use Dark Menu
-- Highlight Color: GREEN
-- Scroll Bars Automatic
 - Close Windows when quitting an App
 
 **Display**
