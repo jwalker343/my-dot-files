@@ -171,10 +171,6 @@ export GREP_COLORS
 # Set kubeconfig directory and file list
 export KUBECONFIG=$(ls ~/kube/*.* | paste -s -d: -)
 
-# export secret vars
-#HOMEBREW_GITHUB_API_TOKEN
-source ~/git/my-dot-files/envvar.secret
-
 # Enable Shell Options
 shopt -s cdspell
 
@@ -446,4 +442,4 @@ fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-
+builtin cd ~
