@@ -15,6 +15,9 @@ bash -c "./setup/casks.sh"
 # Link up the dot files
 bash -c "./setup/link-config-files.sh"
 
+# setup SSH configuration
+bash -c "./setup/ssh.sh"
+
 # Setup Vim
 bash -c "./setup/vim.sh"
 
@@ -23,3 +26,6 @@ bash -c "./setup/motd.sh"
 
 # Configure OSX Settings
 bash -c "./setup/macos.sh"
+
+# Other configuration
+bash -c "./setup/addons.sh"
