@@ -36,7 +36,6 @@ brew install telnet                     # telnet client
 # Cloud
 brew install azure-cli                  # Azure Command Line Client
 brew install awscli                     # AWS Command Line Client
-brew install google-cloud-sdk           # gcloud SDK
 
 # Awesomeness
 brew install thefuck                    # Automatically Fix Errors

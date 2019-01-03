@@ -23,6 +23,7 @@ brew cask install quicklook-csv                     # CSV Files
 brew cask install quicklook-json                    # JSON Files
 
 # General
+brew cask install google-cloud-sdk                  # gcloud SDK
 brew cask install angry-ip-scanner                  # Scan Local IP Networks
 brew cask install bettertouchtool                   # Customize mouse, keyboard, touchbar
 brew cask install cheatsheet                        # Hold Command to get Shortcuts
