@@ -17,7 +17,7 @@ brew install git-crypt                  # Encrypt files in git
 brew install git-flow                   # Better git methodoligies
 brew install diff-so-fancy              # Better diff tolls for GIT
 brew install node                       # node
-brew insatll yarn                       # yarn for node
+brew install yarn                       # yarn for node
 brew install jq                         # Process JSON files in bash
 
 # Kubernetes
@@ -25,7 +25,7 @@ brew install kubernetes-cli             # Kubernetes
 brew install kubernetes-helm            # Kubernetes Helm Client
 brew install helmfile                   # Declarative Helm Installations
 brew install kustomize                  # Structured kubernetes yaml files
-brew install kubectx --with-short-names # Interactive kube context switching
+brew install kubectx                    # Interactive kube context switching
 
 # Tech Tools
 brew install nmap                       # Network scanning tool
