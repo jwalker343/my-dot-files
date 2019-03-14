@@ -7,4 +7,3 @@ echo -e "Host *" >> ~/.ssh/config
 echo -e "\t StrictHostKeyChecking no" >> ~/.ssh/config
 echo -e "\t UserKnownHostsFile=/dev/null" >> ~/.ssh/config
 echo -e "\t KexAlgorithms +diffie-hellman-group1-sha1" >> ~/.ssh/config
-```
