@@ -40,6 +40,7 @@ brew cask install kaleidoscope                      # Diff tool
 brew cask install microsoft-remote-desktop-beta     # Because Windows
 brew cask install mysqlworkbench                    # Manage MySQL Servers
 brew cask install skitch                            # Capture & Annotate your screen
+brew cask install spotify                           # Amazing Music
 brew cask install timing                            # Time Tracking App
 brew cask install visual-studio-code-insiders       # code editor
 brew cask install xquartz                           # x11 forwarding thingy for mac
