@@ -179,7 +179,7 @@ Sign into apple ID for app-store and install the following apps:
     - Lastpass: Enable addon
     - Sign in to chrome
     - enter encryption passphrase (hint it's: ***********)
-    - Pushbullet: signin & then configure encryption key
+    - Join: signin & then configure encryption key
 - Microsoft RDP Beta
     - User Accounts: Add your account
     - Change to list view
@@ -192,7 +192,7 @@ Sign into apple ID for app-store and install the following apps:
     - Configure S3 settings
 - Terminal
     - Import base16-Dark.terminal
-    - Set base15-Dark as the default
+    - Set base16-Dark as the default
     - Set new windows to open with base16-dark
 - Google Backup and Sync
 - Visual Studio Code Settings Sync
