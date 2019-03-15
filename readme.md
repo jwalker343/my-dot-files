@@ -1,11 +1,15 @@
 # Bootstrap this repository
+Get started in a hurry on a fresh mac installation. This takes care of most of the brew and and base config.
+
+_Tested with: **10.14 Mojave**_
+
 ```bash
 export DOTFILE_GIT_DIRECTORY="$HOME/Documents/git"
 cd; bash -c "`curl -fsSL https://raw.githubusercontent.com/jwalker343/my-dot-files/master/install.sh`"
 ```
 
 # [Configure Preferences and Applications](application_preferences.md)
-There are application preferences and mac preferences that cannot be scripted out this is where they are documented
+There are application preferences and mac preferences that have not yet been scripted out. This is where they are documented.
 
 # [Configure Peripherals](peripherals.md)
 Peripherals like keyboard, mouse, printers, etc...
