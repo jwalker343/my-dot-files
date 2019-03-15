@@ -181,12 +181,13 @@ shopt -s cdspell
 
 #   source sysadmin-docker-tools repo
 #   ------------------------------------------------------------
-for file in ~/git/sysadmin-docker-tools/* ; do
-  if [ ! "$file" == "readme.md" ] && [ ! -d "$file" ] ; then
-    . "$file"
-  fi
-done
-
+if [ -d "~/git/sysadmin-docker-tools" ]; then
+  for file in ~/git/sysadmin-docker-tools/* ; do
+    if [ ! "$file" == "readme.md" ] && [ ! -d "$file" ] ; then
+      . "$file"
+    fi
+  done
+fi
 
 
 #   -------------------------------
