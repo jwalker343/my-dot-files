@@ -2,39 +2,37 @@
 
 ### App Store
 Sign into apple ID for app-store and install the following apps:
-- Accept the usage for Numbers,Keynote,pages,etc...
 - Sonicwall mobile connect
-- Xcode
-- Skitch
 - Monosnap
-- Open Xcode and agree to terms
+- xcode (Maybe)
+- Open Xcode and agree to terms (Maybe)
 
 
 
 # Mac System Preferences
 **General**
-- Close Windows when quitting an App
-
-**Display**
-- Uncheck auto adjust for display brightness
-- Select "Scaled" For More Space 
+- Show scroll bars when scrolling
+- Default browser set to Chrome
 
 **Desktop**
+- Picture (Not Dynamic)
 - Change automatically every 5 minutes
-- random order
+- Random order
 - Folder > Google Drive > Wallpapers
 
 **Screen Saver**
 - Ken Burns > Folder > Google Drive > Wallpapers
+- Start after 5 minutes
 
 **Dock**
 - Size 33%
 - Magnification 75%
 - Position Left
 - Minimize using Scale
-- Animate Opening
+- Minimize windows into application icon
 - Auto Hide and Show
 - Show indicators for open apps
+- Uncheck show recent applications in Dock
 
 **Mission Control**
 - uncheck auto rearrange spaces based on usage
@@ -48,12 +46,17 @@ Sign into apple ID for app-store and install the following apps:
     - Analytics
         - Don't send
     - Accessibility
+        - You will need to open these apps first:
         - allow BetterTouchTools
         - allow Cheatsheet
 
 **Spotlight**
 - uncheck music movies fonts
 - make sure search shortcut is cmd+Space
+
+**Display**
+- Uncheck auto adjust for display brightness
+- Select "Scaled" For More Space 
 
 **Energy Saver**
 - Battery
@@ -73,28 +76,27 @@ Sign into apple ID for app-store and install the following apps:
     - remove show desktop and dashboard
     - Enable Full Keyboard Access "All Controls"
 
-**Trackpad**
+**Trackpad/Mouse**
 - Uncheck Scroll Direction Natural
 - Swipe between full-screen apps = 4 fingers
 - Mission Control = 4 fingers
 - App Exposé = 4 fingers
 - uncheck launchpad gesture
 
-**Date & Time**
-- display the time with seconds
-- Show day of the week
-
 **Sound**
 - Play Feedback when volume is changed
+
+**Networking**
+- Go update DHCP reservations for your wifi and ethernet nics
+
+**Date & Time**
+- display the time with seconds
 
 **Accessibility**
 - Zoom > Use scroll gesture with modifier keys to zoom (Control Key.)
 
 **bluetooth**
 - show bluetooth in menu bar
-
-**Networking**
-- Go update DHCP reservations for your wifi and ethernet nics
 
 
 # Application Preferences
@@ -105,7 +107,6 @@ Sign into apple ID for app-store and install the following apps:
 - sidebar / uncheck
     - Recents
     - iCloud Drive
-    - Back to my Mac
     - Bonjour Computers
     - Tags
 - sidebar / Check these
