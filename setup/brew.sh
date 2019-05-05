@@ -20,6 +20,7 @@ brew install diff-so-fancy              # Better diff tolls for GIT
 brew install node                       # node
 brew install yarn                       # yarn for node
 brew install jq                         # Process JSON files in bash
+brew install cfssl                      # Cloudflare's PKI/TLS toolkit
 
 # Kubernetes
 brew install kubernetes-cli             # Kubernetes
