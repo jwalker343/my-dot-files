@@ -10,6 +10,7 @@ brew install gpg                        # Encrypt all the things
 brew install bash-completion            # Because lazy
 brew install watch                      # Watch a command output over time
 brew install parallel                   # GNU Parallel / execute jobs in parallel
+brew install tmux                       # Terminal Multiplexer
 
 # Developer
 brew install git                        # Source Control
