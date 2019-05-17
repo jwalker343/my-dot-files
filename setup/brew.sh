@@ -21,6 +21,7 @@ brew install node                       # node
 brew install yarn                       # yarn for node
 brew install jq                         # Process JSON files in bash
 brew install cfssl                      # Cloudflare's PKI/TLS toolkit
+brew install shellcheck                 # Lint bash scripts
 
 # Kubernetes
 brew install kubernetes-cli             # Kubernetes
