@@ -5,6 +5,18 @@
 
 # Install CLI tools from Brew
 
+# GNU Tools
+brew install bash                       # Update Bash
+brew install coreutils                  # Common Tools (cat, ls, etc..)
+brew install findutils                  # find, xargs, locate
+brew install gawk                       # Awk
+brew install gnu-sed                    # Sed
+brew install gnu-tar                    # Tar
+brew install gnu-which                  # Which
+brew install grep                       # Grep
+brew install make                       # Update make
+brew install wget                       # Wget
+
 # General
 brew install bash-completion            # Because lazy
 brew install gpg                        # Encrypt all the things
@@ -18,6 +30,7 @@ brew install cfssl                      # Cloudflare's PKI/TLS toolkit
 brew install diff-so-fancy              # Better diff tolls for GIT
 brew install git-crypt                  # Encrypt files in git
 brew install git-flow                   # Better git methodoligies
+brew install go                         # Go Programming Language
 brew install jq                         # Process JSON files in bash
 brew install node                       # node
 brew install shellcheck                 # Lint bash scripts

@@ -153,7 +153,7 @@ PROMPT_COMMAND="${PROMPT_TITLE}; __prompt_command"
 #   Set Paths
 #   ------------------------------------------------------------
 export GOPATH=$HOME/go
-export PATH=~/bin:vendor/bin:/usr/local/bin:/usr/local/git/bin:$PATH:/usr/local/go/bin:$GOPATH/bin
+export PATH=~/bin:vendor/bin:/usr/local/bin:/usr/local/git/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/gnu-which/libexec/gnubin:/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/make/libexec/gnubin:$PATH:/usr/local/go/bin:$GOPATH/bin
 
 #   Set Default Editor 
 #   ------------------------------------------------------------
@@ -162,9 +162,6 @@ export EDITOR=vim
 #   Set Default Vagrant Provider
 #   ------------------------------------------------------------
 export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
-
-# Grep settings
-export GREP_OPTIONS='--color=auto'
 
 # Make the grep highlights show up in red
 export GREP_COLORS
@@ -301,7 +298,7 @@ mcd () { mkdir -p "$1" && cd "$1"; }
 cd () { 
   builtin cd "$@"
   if [ $? == 0 ]; then
-    ls -hpG
+    ls -hp --color
   else
     return 1
   fi
@@ -494,7 +491,8 @@ function kubeoff() {
 #   -------------------------------
 #   6.  ALIASES
 #   -------------------------------
-alias please="fuck"			    # Make fuck more pleasant
+alias please="fuck"			                    # Make fuck more pleasant
+alias grep="grep --color=auto"              # Grep with colors always
 
 alias watch="watch "                        # Fix issue with watch alias computation
 alias watch1="watch -n 1 "                  # Watch in 1s counters
@@ -502,10 +500,10 @@ alias watch3="watch -n 3 "                  # Watch in 3s counters
 alias watch5="watch -n 5 "                  # Watch in 5s counters
 
 
-alias hr="hr \~ && hr = && hr \~"
+alias hr="hr \~ && hr = && hr \~"           # Horizontal Rule
 
-alias ls="ls -hpG"
-alias lsl="ls -alhpG"
+alias ls="ls -hp --color"                   # Show units, directories and colors.
+alias lsl="ls -alhp --color"                # List view with the above.
 alias cls="clear;ls"
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
@@ -514,7 +512,7 @@ alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
 alias ..='cd ../'                           # Go back 1 directory level
 alias ...='cd ../../'                       # Go back 2 directory levels
-alias .2='cd ../../'						# Go back 2 directory levels
+alias .2='cd ../../'						            # Go back 2 directory levels
 alias .3='cd ../../../'                     # Go back 3 directory levels
 alias f='open -a Finder ./'                 # Opens current directory in MacOS Finder
 
