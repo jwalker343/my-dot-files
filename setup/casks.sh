@@ -34,6 +34,7 @@ brew cask install chefdk                            # Chef, Knife toolset
 brew cask install font-fira-code                    # Font with Ligatures
 brew cask install google-backup-and-sync            # Google Drive Replacement
 brew cask install google-cloud-sdk                  # gcloud SDK
+brew cask install grandperspective                  # Disk Space Usage visualizer
 brew cask install java8                             # Unfortunately, java
 brew cask install kaleidoscope                      # Diff tool
 brew cask install microsoft-remote-desktop-beta     # Because Windows
