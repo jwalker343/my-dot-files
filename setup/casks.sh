@@ -43,6 +43,7 @@ brew cask install skitch                            # Capture & Annotate your sc
 brew cask install spotify                           # Amazing Music
 brew cask install timing                            # Time Tracking App
 brew cask install visual-studio-code-insiders       # code editor
+brew cask install vlc                               # working video player
 brew cask install webex-teams                       # Collaboration & Messaging
 brew cask install xquartz                           # x11 forwarding thingy for mac
 brew cask install zterm                             # Cisco Console Connections
