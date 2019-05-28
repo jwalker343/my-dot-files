@@ -27,12 +27,14 @@ brew install watch                      # Watch a command output over time
 # Developer
 brew install git                        # Source Control
 brew install cfssl                      # Cloudflare's PKI/TLS toolkit
+brew install composer                   # PHP Package Management
 brew install diff-so-fancy              # Better diff tolls for GIT
 brew install git-crypt                  # Encrypt files in git
 brew install git-flow                   # Better git methodoligies
 brew install go                         # Go Programming Language
 brew install jq                         # Process JSON files in bash
 brew install node                       # node
+brew install php72                      # Update PHP to version 7.2
 brew install shellcheck                 # Lint bash scripts
 brew install yarn                       # yarn for node
 
