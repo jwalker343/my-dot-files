@@ -153,7 +153,7 @@ PROMPT_COMMAND="${PROMPT_TITLE}; __prompt_command"
 #   Set Paths
 #   ------------------------------------------------------------
 export GOPATH=$HOME/go
-export PATH=~/bin:vendor/bin:/usr/local/bin:/usr/local/git/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/gnu-which/libexec/gnubin:/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/make/libexec/gnubin:/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:$PATH:/usr/local/go/bin:/usr/local/sbin:/usr/local/texlive/2019basic/bin/x86_64-darwin:$GOPATH/bin
+export PATH=~/bin:vendor/bin:/usr/local/bin:/usr/local/git/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/gnu-tar/libexec/gnubin:/usr/local/opt/gnu-which/libexec/gnubin:/usr/local/opt/grep/libexec/gnubin:/usr/local/opt/make/libexec/gnubin:/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:~/.krew/bin:$PATH:/usr/local/go/bin:/usr/local/sbin:/usr/local/texlive/2019basic/bin/x86_64-darwin:$GOPATH/bin
 
 #   Set Default Editor 
 #   ------------------------------------------------------------
