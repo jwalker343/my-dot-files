@@ -29,3 +29,6 @@ bash -c "./setup/macos.sh"
 
 # Other configuration
 bash -c "./setup/addons.sh"
+
+# Change to fresh bash installed via brew
+chsh -s /usr/local/bin/bash 

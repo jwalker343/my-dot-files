@@ -191,35 +191,13 @@ fi
 #   4.  TAB COMPLETION
 #   -------------------------------
 
-
-
-# Include git complete & git flow complete
-if [ -f ~/.git-completion.bash ]; then
- . ~/.git-completion.bash
- . ~/.git-flow-completion.bash
-fi
-
-# Git flow autocomplete (bash-completion)
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-      . $(brew --prefix)/etc/bash_completion
-fi
-
-# git tab completion (homebrew)
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
-    . `brew --prefix`/etc/bash_completion.d/git-completion.bash
-fi
-
 #azure Completion
 if [ -f ~/lib/azure-cli/az.completion ]; then
     source ~/lib/azure-cli/az.completion
 fi
 
-#kubectl completion
-if [ -x "$(command -v kubectl)" ]; then
-    source <(kubectl completion bash)
-fi
-
-
+export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 
 

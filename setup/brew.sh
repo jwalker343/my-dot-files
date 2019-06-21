@@ -18,7 +18,7 @@ brew install make                       # Update make
 brew install wget                       # Wget
 
 # General
-brew install bash-completion            # Because lazy
+brew install bash-completion@2          # Because lazy
 brew install gpg                        # Encrypt all the things
 brew install parallel                   # GNU Parallel / execute jobs in parallel
 brew install tmux                       # Terminal Multiplexer
