@@ -210,20 +210,20 @@ export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 
 
 #   copy-key: to copy your public SSH key for pasting
-#   ------------------------------------------------------------
+#   -------------------------------------------------------------------
 function copy-key {
   cat ~/.ssh/id_rsa.pub | pbcopy && echo "Key copied to clipboard"
 }
 
 
 #   showa: to remind yourself of an alias (given some part of it)
-#   ------------------------------------------------------------
+#   -------------------------------------------------------------------
 showa () { /usr/bin/grep --color=always -i -a1 $@ ~/.profile | grep -v '^\s*$' | less -FSRXc ; }
 
 
 
 #   cdf:  'Cd's to frontmost window of MacOS Finder
-#   ------------------------------------------------------
+#   -------------------------------------------------------------------
 cdf () {
     currFolderPath=$( /usr/bin/osascript <<EOT
         tell application "Finder"
@@ -243,7 +243,7 @@ EOT
 
 
 #   extract:  Extract most know archives with one command
-#   ---------------------------------------------------------
+#   -------------------------------------------------------------------
 extract () {
     if [ -f $1 ] ; then
       case $1 in
@@ -259,15 +259,14 @@ extract () {
         *.Z)         uncompress $1  ;;
         *.7z)        7z x $1        ;;
         *)     echo "'$1' cannot be extracted via extract()" ;;
-         esac
-     else
-         echo "'$1' is not a valid file"
-     fi
+      esac
+    else
+        echo "'$1' is not a valid file"
+    fi
 }
 
 #   mcd:  Make a new directory and jump inside it
 #   -------------------------------------------------------------------
-
 mcd () { mkdir -p "$1" && cd "$1"; }    
 
 
@@ -322,7 +321,7 @@ function kdashboard {
 
 
 #   check: Check a host and port 
-#   ------------------------------------------------------------
+#   -------------------------------------------------------------------
 function check() {
   if [ $# -eq 0 ] 
   then
@@ -333,7 +332,7 @@ function check() {
 }
 
 #   route: manage routes
-#   ------------------------------------------------------------
+#   -------------------------------------------------------------------
 function route() {
   if [ $# -eq 0 ] 
   then
@@ -357,7 +356,7 @@ function route() {
 
 #   kpods: Get Pod List or describe pod
 #          source: https://github.com/shawnxlw/kubernetes-tools
-#   ------------------------------------------------------------
+#   -------------------------------------------------------------------
 function kpod() {
   # parse arguments
   while [ "$1" != "" ]; do
@@ -393,7 +392,7 @@ describe_pod() {
 
 #   kcopy: Copy bustbox into kubernetes pod
 #          source: https://github.com/shawnxlw/kubernetes-tools
-#   ------------------------------------------------------------
+#   -------------------------------------------------------------------
 BUSY_BOX_URL="https://busybox.net/downloads/binaries/1.27.1-i686/busybox"
 BUSY_BOX_SHA="b51b9328eb4e60748912e1c1867954a5cf7e9d5294781cae59ce225ed110523c"
 BUSY_BOX_PATH="/tmp/${BUSY_BOX_SHA}"
@@ -456,15 +455,26 @@ function get_busybox() {
   fi
 }
 
+#   kubeon:  Turns on kubernetes header in terminal window
+#   -------------------------------------------------------------------
 function kubeon() {
   rm -f -- "${KPS1_DISABLE_PATH}"
 }
 
+#   kubeoff:  Turns off kubernetes header in terminal window
+#   -------------------------------------------------------------------
 function kubeoff() {
   mkdir -p -- "$(dirname "${KPS1_DISABLE_PATH}")"
   touch -- "${KPS1_DISABLE_PATH}"
 }
 
+#   stamp:  Gets the current timestamp and puts it in the clipboard
+#   -------------------------------------------------------------------
+function stamp() {
+  timestamp=$(date +%Y%m%d-%H%M%S) 
+  printf $timestamp | pbcopy
+  echo "$timestamp copied to clipboard"
+}
 
 #   -------------------------------
 #   6.  ALIASES
