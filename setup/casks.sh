@@ -23,6 +23,10 @@ brew cask install qlstephen                         # Text files w/no ext
 brew cask install quicklook-csv                     # CSV Files
 brew cask install quicklook-json                    # JSON Files
 
+# Puppet
+brew cask install puppetlabs/puppet/puppet-bolt     # Puppet Bolt
+
+
 # General
 brew cask install angry-ip-scanner                  # Scan Local IP Networks
 brew cask install azure-data-studio                 # Like MySQL Workbench for sql servers
