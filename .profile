@@ -497,6 +497,8 @@ alias kci="kubectl cluster-info; kubectl get nodes; kubectl get namespaces"
 alias kwho="kubectl config current-context"
 alias kaf="kubectl apply -f"
 alias kex="kubectl exec -i -t"
+alias kns="kubens"
+alias kctx="kubectx"
 
 #Get current default namespace
 #k config get-contexts | grep "*" | awk '{print $5}'
