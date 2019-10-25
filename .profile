@@ -354,43 +354,7 @@ function route() {
 
 
 
-#   kpods: Get Pod List or describe pod
-#          source: https://github.com/shawnxlw/kubernetes-tools
-#   -------------------------------------------------------------------
-function kpod() {
-  # parse arguments
-  while [ "$1" != "" ]; do
-    case $1 in
-      -n | --namespace ) shift
-        get_pods "-n $1"
-        ;;
-      -a | --all) shift
-        get_pods "--all-namespaces"
-        ;;
-      * ) describe_pod "$1"
-    esac
-    shift
-  done
-
-  # get pods in current namespace if no arguments specified
-  if [ $# -eq 0 ]; then get_pods; fi
-}
-
-# get pods helper for kpod
-get_pods() {
-  kubectl get pod $1
-  return
-}
-
-# describe pods helper for kpod
-describe_pod() {
-  kubectl describe pod $1
-  return
-}
-
-
-
-#   kcopy: Copy bustbox into kubernetes pod
+#   kcopy: Copy busybox into kubernetes pod
 #          source: https://github.com/shawnxlw/kubernetes-tools
 #   -------------------------------------------------------------------
 BUSY_BOX_URL="https://busybox.net/downloads/binaries/1.27.1-i686/busybox"
@@ -523,13 +487,16 @@ alias vm="ssh vagrant@127.0.0.1 -p 2222"
 
 # Kubectl & Kubernetes
 alias k="kubectl"
-alias kpods=kpod
-alias kpdos=kpod
-alias ksvc="kubectl get services"
-alias kdep="kubectl get deployments"
+alias kgp="kubectl get pods"
+alias kgpall="kubectl get pods --all-namespaces"
+alias kgs="kubectl get services"
+alias kgd="kubectl get deployments"
+alias kgn="kubectl get nodes"
+alias kdp="kubectl describe pod"
 alias kci="kubectl cluster-info; kubectl get nodes; kubectl get namespaces"
 alias kwho="kubectl config current-context"
 alias kaf="kubectl apply -f"
+alias kex="kubectl exec -i -t"
 
 #Get current default namespace
 #k config get-contexts | grep "*" | awk '{print $5}'
