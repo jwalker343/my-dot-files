@@ -4,6 +4,7 @@
 brew tap homebrew/cask-cask                         # Cask can install applications
 brew tap homebrew/cask-fonts                        # Cask can install Fonts
 brew tap homebrew/cask-versions                     # Cask can install Older Versions
+brew tap brew tap AdoptOpenJDK/openjdk              # OpenJDK versions
 brew tap chef/chef                                  # Chefdk is hosted on a seperate tap
 
 # Browsers
@@ -32,7 +33,7 @@ brew cask install font-fira-code                    # Font with Ligatures
 brew cask install google-backup-and-sync            # Google Drive Replacement
 brew cask install google-cloud-sdk                  # gcloud SDK
 brew cask install grandperspective                  # Disk Space Usage visualizer
-brew cask install java8                             # Unfortunately, java
+brew cask install adoptopenjdk8-jre                 # Unfortunately, java. atleast it's openjdk?
 brew cask install kaleidoscope                      # Diff tool
 brew cask install microsoft-remote-desktop-beta     # Because Windows
 brew cask install mysqlworkbench                    # Manage MySQL Servers
