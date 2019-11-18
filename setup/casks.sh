@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Taps
-brew tap caskroom/cask                              # Cask can install applications
-brew tap caskroom/fonts                             # Cask can install Fonts
-brew tap caskroom/versions                          # Cask can install Older Versions
+brew tap homebrew/cask-cask                         # Cask can install applications
+brew tap homebrew/cask-fonts                        # Cask can install Fonts
+brew tap homebrew/cask-versions                     # Cask can install Older Versions
 brew tap chef/chef                                  # Chefdk is hosted on a seperate tap
 
 # Browsers
