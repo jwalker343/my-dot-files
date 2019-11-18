@@ -13,8 +13,6 @@ brew cask install google-chrome                     # Because firefox sucks
 
 # Docker
 brew cask install docker                            # Containerization Software
-brew cask install captain                           # (eval) container management menubar 
-brew cask install kitematic                         # Think Client Container Management
 
 # QuickLooks
 brew cask install qlcolorcode                       # Syntax Highlighting
@@ -23,17 +21,12 @@ brew cask install qlstephen                         # Text files w/no ext
 brew cask install quicklook-csv                     # CSV Files
 brew cask install quicklook-json                    # JSON Files
 
-# Puppet
-brew cask install puppetlabs/puppet/puppet-bolt     # Puppet Bolt
-
-
 # General
 brew cask install angry-ip-scanner                  # Scan Local IP Networks
 brew cask install azure-data-studio                 # Like MySQL Workbench for sql servers
 brew cask install balenaetcher                      # Bootable USB drive Maker
 brew cask install bettertouchtool                   # Customize mouse, keyboard, touchbar
 brew cask install caffeine                          # Keeps your screen awake
-brew cask install cheatsheet                        # Hold Command to get Shortcuts
 brew cask install chefdk                            # Chef, Knife toolset
 brew cask install font-fira-code                    # Font with Ligatures
 brew cask install google-backup-and-sync            # Google Drive Replacement
@@ -50,4 +43,3 @@ brew cask install visual-studio-code-insiders       # code editor
 brew cask install vlc                               # working video player
 brew cask install webex-teams                       # Collaboration & Messaging
 brew cask install xquartz                           # x11 forwarding thingy for mac
-brew cask install zterm                             # Cisco Console Connections
