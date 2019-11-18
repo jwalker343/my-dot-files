@@ -31,4 +31,6 @@ bash -c "./setup/macos.sh"
 bash -c "./setup/addons.sh"
 
 # Change to fresh bash installed via brew
+echo "You must manually add '/usr/local/bin/bash' to '/etc/shells'"
+read -rsp $'Manually update /etc/shells then press any key to continue...\n' -n1 key
 chsh -s /usr/local/bin/bash 
