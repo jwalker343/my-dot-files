@@ -20,3 +20,4 @@ Shamelessly stolen from various online sources including but not limited to:
 - https://gist.github.com/natelandau/10654137
 - http://www.spinen.com
 - https://github.com/webpro/dotfiles
+- Many other wonderful people

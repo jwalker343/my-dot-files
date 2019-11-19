@@ -15,6 +15,7 @@
 #   -------------------------------
 #   1.  DEFINITIONS
 #   -------------------------------
+
 eval $(thefuck --alias)
 
 CYAN="\[\033[0;36m\]"
@@ -31,20 +32,19 @@ SMILEY="${GREEN}:)${NORMAL}"
 FROWNY="${RED}:(${NORMAL}"
 
 #   -------------------------------
-#   2.  GIT INTEGRATION
+#   2.  GIT INTEGRATION FUNCTIONS
 #   -------------------------------
-
 
 function git-branch-name {
   git symbolic-ref HEAD 2>/dev/null | cut -d"/" -f 3,4
 }
 
-
+# Used by the Git-ps1 prompt
 function git-branch-prompt {
   local branch=$(git-branch-name)
 
   if [ $branch ]; then
-    local branch_color="${PURPLE}"     # Default to green
+    local branch_color="${PURPLE}"    # Default to green
     local ahead_behind=""             # Default to empty ahead/behind numbers
 
     # Check to see if there are any staged files
@@ -77,7 +77,8 @@ function git-branch-prompt {
   fi
 }
 
-
+#
+# Let's us do git squash but easily.
 function gitsquash {
 
   local squashcount=${1:-4}
@@ -101,8 +102,6 @@ function gitsquash {
   git rebase -i origin/$gitbranch~$squashcount $gitbranch
 
 }
-
-
 
 
 #   -------------------------------
@@ -149,7 +148,6 @@ __kube_ps1() {
 PROMPT_TITLE='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007" '
 PROMPT_COMMAND="${PROMPT_TITLE}; __prompt_command"
 
-
 #   Set Paths
 #   ------------------------------------------------------------
 export GOPATH=$HOME/go
@@ -176,15 +174,9 @@ source ~/git/my-dot-files/envvar.secret
 # Enable Shell Options
 shopt -s cdspell
 
-#   source sysadmin-docker-tools repo
-#   ------------------------------------------------------------
-if [ -d "~/git/sysadmin-docker-tools" ]; then
-  for file in ~/git/sysadmin-docker-tools/* ; do
-    if [ ! "$file" == "readme.md" ] && [ ! -d "$file" ] ; then
-      . "$file"
-    fi
-  done
-fi
+#   Source the 'z' program that maintains recent working dirs.
+#   -------------------------------------------------------------------
+source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
 
 
 #   -------------------------------
@@ -196,6 +188,7 @@ if [ -f ~/lib/azure-cli/az.completion ]; then
     source ~/lib/azure-cli/az.completion
 fi
 
+# Bash Completion
 export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
@@ -210,19 +203,15 @@ fi
 #   4.  ADDED FUNCTIONS
 #   -------------------------------
 
-
 #   copy-key: to copy your public SSH key for pasting
 #   -------------------------------------------------------------------
 function copy-key {
   cat ~/.ssh/id_rsa.pub | pbcopy && echo "Key copied to clipboard"
 }
 
-
 #   showa: to remind yourself of an alias (given some part of it)
 #   -------------------------------------------------------------------
 showa () { /usr/bin/grep --color=always -i -a1 $@ ~/.profile | grep -v '^\s*$' | less -FSRXc ; }
-
-
 
 #   cdf:  'Cd's to frontmost window of MacOS Finder
 #   -------------------------------------------------------------------
@@ -241,8 +230,6 @@ EOT
     echo "cd to \"$currFolderPath\""
     cd "$currFolderPath"
 }
-
-
 
 #   extract:  Extract most know archives with one command
 #   -------------------------------------------------------------------
@@ -271,7 +258,6 @@ extract () {
 #   -------------------------------------------------------------------
 mcd () { mkdir -p "$1" && cd "$1"; }    
 
-
 #   cd:  show contents after changing dir
 #   -------------------------------------------------------------------
 cd () { 
@@ -281,16 +267,14 @@ cd () {
   else
     return 1
   fi
-  }				
-
+  }
 
 #   ii:  display useful host related informaton
 #   -------------------------------------------------------------------
 ii() {
-
+    # Local Defs
     LNORMAL="\033[0m"
     LRED="\033[1;31m"
-
 
     echo -e "NETWORK INFORMATION"
     echo -e "\n${LNORMAL}Current date :${LRED} " ; date
@@ -302,25 +286,6 @@ ii() {
     echo -e "\n${LNORMAL}Speedtest.net ATLANTA, GA :${LRED} " ; speedtest-cli --share --server 10035
     echo
 }
-
-
-#   z:   maintain a working list of directories you actually use with z
-#   -------------------------------------------------------------------
-source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
-
-
-#   kdashboard: Proxy Dashboard to localhost and provide URL
-#   -------------------------------------------------------------------
-function kdashboard {
-  echo "Starting Kubectl Proxy"
-  kubectl proxy &
-  echo "Opening Dashboard, URL:"
-  echo "http://localhost:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard:/proxy"
-  sleep 1
-  open "http://localhost:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard:/proxy"
-  fg
-}
-
 
 #   check: Check a host and port 
 #   -------------------------------------------------------------------
@@ -353,8 +318,6 @@ function route() {
     command sudo route -n add -net $2 $3
   fi
 }
-
-
 
 #   kcopy: Copy busybox into kubernetes pod
 #          source: https://github.com/shawnxlw/kubernetes-tools
@@ -445,47 +408,36 @@ function stamp() {
 #   -------------------------------
 #   6.  ALIASES
 #   -------------------------------
-alias please="fuck"			                    # Make fuck more pleasant
-alias grep="grep --color=auto"              # Grep with colors always
 
+# Defaults
+alias grep="grep --color=auto"              # Grep with colors always
+alias ls="ls -hp --color"                   # Show units, directories and colors.
+alias lsl="ls -alhp --color"                # List view with the above.
+alias cp='cp -iv'                           # Preferred 'cp' implementation
+alias mv='mv -iv'                           # Preferred 'mv' implementation
+alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
+
+# Watch
 alias watch="watch "                        # Fix issue with watch alias computation
 alias watch1="watch -n 1 "                  # Watch in 1s counters
 alias watch3="watch -n 3 "                  # Watch in 3s counters
 alias watch5="watch -n 5 "                  # Watch in 5s counters
 
-
-alias hr="hr \~ && hr = && hr \~"           # Horizontal Rule
-
-alias ls="ls -hp --color"                   # Show units, directories and colors.
-alias lsl="ls -alhp --color"                # List view with the above.
-alias cls="clear;ls"
-alias cp='cp -iv'                           # Preferred 'cp' implementation
-alias mv='mv -iv'                           # Preferred 'mv' implementation
-alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
-
+# cd fixes
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
 alias ..='cd ../'                           # Go back 1 directory level
 alias ...='cd ../../'                       # Go back 2 directory levels
 alias .2='cd ../../'						            # Go back 2 directory levels
 alias .3='cd ../../../'                     # Go back 3 directory levels
-alias f='open -a Finder ./'                 # Opens current directory in MacOS Finder
 
+# General
+alias please="fuck"			                    # Make fuck more pleasant
+alias hr="hr \~ && hr = && hr \~"           # Horizontal Rule
+alias cls="clear;ls"
+alias f='open -a Finder ./'                 # Opens current directory in MacOS Finder
 alias myip='curl ipinfo.io'                 # Public facing IP Address
 alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache;echo "Flushed the DNS"'    # Flush out the DNS Cache
-alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias code='/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin/code'
-
-
-# Vagrant
-alias vd="vagrant destroy -f"
-alias vh="vagrant halt"
-alias vp="vagrant provision"
-alias vr="vagrant resume"
-alias vs="vagrant suspend"
-alias vssh="vagrant ssh"
-alias vu="vagrant up"
-alias vm="ssh vagrant@127.0.0.1 -p 2222"
-
 
 # Kubectl & Kubernetes
 alias k="kubectl"
@@ -501,6 +453,3 @@ alias kaf="kubectl apply -f"
 alias kex="kubectl exec -i -t"
 alias kns="kubens"
 alias kctx="kubectx"
-
-#Get current default namespace
-#k config get-contexts | grep "*" | awk '{print $5}'
