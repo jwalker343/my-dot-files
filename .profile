@@ -122,13 +122,14 @@ __prompt_command() {
     local EXIT="$?"             # This needs to be first
 
     export PROMPTSMILE="${SMILEY}"
-    if [ $EXIT = 0 ]; then 
+    if [ $EXIT == 0 ]; then 
       export PROMPTSMILE="${SMILEY} " 
     else 
       export PROMPTSMILE="${FROWNY} " 
     fi
     
     PS1="$(__kube_ps1)${RESET}${CYAN}\W${NORMAL} $(git-branch-prompt)${PROMPTSMILE}${NORMAL}"
+    
 }
 
 # This lets us enable and disable kube_ps1
@@ -453,3 +454,7 @@ alias kaf="kubectl apply -f"
 alias kex="kubectl exec -i -t"
 alias kns="kubens"
 alias kctx="kubectx"
+# Setting PATH for Python 2.7
+# The original version is saved in .profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
