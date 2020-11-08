@@ -16,8 +16,6 @@
 #   1.  DEFINITIONS
 #   -------------------------------
 
-eval $(thefuck --alias)
-
 CYAN="\[\033[0;36m\]"
 GREEN="\[\033[0;32m\]"
 NORMAL="\[\033[0m\]"
@@ -177,8 +175,21 @@ shopt -s cdspell
 
 #   Source the 'z' program that maintains recent working dirs.
 #   -------------------------------------------------------------------
-source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
+if [ "$(uname)" == "Darwin" ]; then
+  source /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
+elif [ "$(uname)" == "Linux" ]; then
+  source /home/linuxbrew/.linuxbrew/etc/profile.d/z.sh
+fi
 
+#
+# Source brew for Linux
+if [ "$(uname)" == "Linux" ]; then
+  eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+fi
+
+# Bring in thefuck which corrects problems
+# aliased to "please" to be more pleasant.
+eval "$(thefuck --alias)"
 
 #   -------------------------------
 #   4.  TAB COMPLETION
@@ -458,3 +469,4 @@ alias kctx="kubectx"
 # The original version is saved in .profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
+
