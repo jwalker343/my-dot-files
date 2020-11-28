@@ -28,10 +28,11 @@ brew install git-crypt                  # Encrypt files in git
 brew install git-flow                   # Better git methodoligies
 brew install go                         # Go Programming Language
 brew install jq                         # Process JSON files in bash
-brew install node                       # node
+brew install node                       # Node
 brew install php72                      # Update PHP to version 7.2
 brew install shellcheck                 # Lint bash scripts
 brew install yarn                       # yarn for node
+brew install ruby                       # Ruby 
 
 # Kubernetes
 brew install kubernetes-cli             # Kubernetes

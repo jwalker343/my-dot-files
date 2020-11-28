@@ -448,8 +448,11 @@ alias hr="hr \~ && hr = && hr \~"           # Horizontal Rule
 alias cls="clear;ls"
 alias f='open -a Finder ./'                 # Opens current directory in MacOS Finder
 alias myip='curl ipinfo.io'                 # Public facing IP Address
-alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache;echo "Flushed the DNS"'    # Flush out the DNS Cache
-alias code='/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin/code'
+
+if [ "$(uname)" == "Darwin" ]; then
+  alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache;echo "Flushed the DNS"'    # Flush out the DNS Cache
+  alias code='/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin/code'
+fi
 
 # Kubectl & Kubernetes
 alias k="kubectl"
