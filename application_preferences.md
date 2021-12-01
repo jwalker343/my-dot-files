@@ -6,7 +6,9 @@ Sign into apple ID for app-store and install the following apps:
 
 # Mac System Preferences
 **General**
-- Show scroll bars when scrolling
+- Appearance: Dark Mode
+- Hightlight Color: Green
+- Show scroll bars automatically when scrolling
 - Default browser set to Chrome
 
 **Desktop**
@@ -31,45 +33,48 @@ Sign into apple ID for app-store and install the following apps:
 
 **Mission Control**
 - uncheck auto rearrange spaces based on usage
-- dashboard = off
-
-**Security and Privacy**
-- Require pass after 5 minutes
-- show message: "This Computer is Locked."
-- Allow apps from anywhere
-- Privacy
-    - Analytics
-        - Don't send
-    - Accessibility
-        - You will need to open these apps first:
-        - allow BetterTouchTools
-        - allow Cheatsheet
 
 **Spotlight**
 - uncheck music movies fonts
 - make sure search shortcut is cmd+Space
 
-**Display**
-- Uncheck auto adjust for display brightness
-- Select "Scaled" For More Space 
+**Accessibility**
+- Zoom > Use scroll gesture with modifier keys to zoom (Control Key.)
 
-**Energy Saver**
-- Battery
-    - display off after 3 minutes
-    - sleep hard disks when possible
-    - slightly dim
-- Power
-    - Display off 3 hours
-    - Sleep hard disks when possible
-    - Wake for Wi-Fi network access
-    - Enable power nap
+**Extensions**
+- Added Extensions... Check All
+- Share Menu
+    - Remove as much as possible except copy link
+
+**Security and Privacy**
+- Require pass after 5 minutes
+- show message: "This Computer is Locked."
+- Allow apps from anywhere
+- Full Disk Access
+    - Check Terminal
+- Developer Tools
+    - Check Terminal
+- Privacy
+    - Analytics
+        - Don't send
+    - Accessibility
+        - You will need to open these apps first:
+        - allow BetterTouchTool
+
+**Networking**
+- Go update DHCP reservations for your wifi and ethernet nics
+
+**bluetooth**
+- show bluetooth in menu bar
+
+**Sound**
+- Play Feedback when volume is changed
 
 **Keyboard**
 - Key Repeat is Fastest
 - delay is short
 - Shortcuts
-    - remove show desktop and dashboard
-    - Enable Full Keyboard Access "All Controls"
+    - Mission Control: remove show desktop
 
 **Trackpad/Mouse**
 - Uncheck Scroll Direction Natural
@@ -78,21 +83,21 @@ Sign into apple ID for app-store and install the following apps:
 - App Exposé = 4 fingers
 - uncheck launchpad gesture
 
-**Sound**
-- Play Feedback when volume is changed
+**Display**
+- Uncheck auto adjust for display brightness
+- Select "Scaled" & More Space 
+- Enable Night Shift
 
-**Networking**
-- Go update DHCP reservations for your wifi and ethernet nics
+**Battery**
+- Battery
+    - display off after 3 minutes
+    - slightly dim
+- Power
+    - Display off 3 hours
+    - Wake for Wi-Fi network access
 
 **Date & Time**
 - display the time with seconds
-
-**Accessibility**
-- Zoom > Use scroll gesture with modifier keys to zoom (Control Key.)
-
-**bluetooth**
-- show bluetooth in menu bar
-
 
 # Application Preferences
 
