@@ -2,12 +2,7 @@
 
 ### App Store
 Sign into apple ID for app-store and install the following apps:
-- Sonicwall mobile connect
 - Monosnap
-- xcode (Maybe)
-- Open Xcode and agree to terms (Maybe)
-
-
 
 # Mac System Preferences
 **General**
