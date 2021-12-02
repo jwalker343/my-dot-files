@@ -136,7 +136,6 @@ Sign into apple ID for app-store and install the following apps:
         - Trigger Other Keyboard Shortcut CMD+K
         - Action: send shortcut to app, search for finder
         - change shortcut keys to CMD+K
-    - Touchbar > Add Lock Icon with action to lock screen
 
 # UI Preferences
 - Create a new IPSec VPN
@@ -152,7 +151,7 @@ Sign into apple ID for app-store and install the following apps:
     - N-able
     - Code
     - Outlook
-    - Spark
+    - Webex/Teams
     - (spacer)
     - Trashcan
 
@@ -168,8 +167,6 @@ Sign into apple ID for app-store and install the following apps:
 
 # Other Apps that need to be installed
 - Anyconnect 
-- GoToAssist Expert [http://www.fastsupport.com/download/repDownload](Here)
-- Microsoft Office 2016 [http://login.microsoftonline.com](Here)
 
 ### Configure:
 - Docker
@@ -180,7 +177,7 @@ Sign into apple ID for app-store and install the following apps:
     - Sign in to chrome
     - enter encryption passphrase (hint it's: ***********)
     - Join: signin & then configure encryption key
-- Microsoft RDP Beta
+- Microsoft RDP
     - User Accounts: Add your account
     - Change to list view
     - Export Desktops on old machine by:
