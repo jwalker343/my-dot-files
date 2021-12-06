@@ -34,14 +34,16 @@ brew install git-flow                   # Better git methodoligies
 brew install go                         # Go Programming Language
 brew install jq                         # Process JSON files in bash
 brew install node                       # node
-brew install php72                      # Update PHP to version 7.2
+brew install php@7.2                    # Install PHP 7.2
+Brew install php@8.1                    # Install PHP 8.1
 brew install shellcheck                 # Lint bash scripts
 brew install yarn                       # yarn for node
 
 # Kubernetes
 brew install kubernetes-cli             # Kubernetes
-brew install kubernetes-helm            # Kubernetes Helm Client
+brew install helm                       # Kubernetes Helm Client
 brew install helmfile                   # Declarative Helm Installations
+brew install krew                       # Kubectl plugin manager
 brew install kubectx                    # Interactive kube context switching
 brew install kustomize                  # Structured kubernetes yaml files
 
@@ -62,3 +64,5 @@ brew install httpie                     # Curl but with colors!
 brew install thefuck                    # Automatically Fix Errors
 brew install tldr                       # Shorter Man Pages
 brew install z                          # Shortcut for recent Dirs
+brew install romkatv/powerlevel10k/powerlevel10k
+brew install pygments
