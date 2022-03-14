@@ -47,12 +47,14 @@ brew install --cask balenaetcher                      # Bootable USB drive Maker
 brew install --cask bettertouchtool                   # Customize mouse, keyboard, touchbar
 brew install --cask caffeine                          # Keeps your screen awake
 brew install --cask cyberduck                         # FTP and SCP Tool
+brew install --cask finicky                           # Default Web Broswer Routing
 brew install --cask font-fira-code                    # Font with Ligatures
-brew install font-Fira-Code-nerd-font
+brew install font-Fira-Code-nerd-font                 # Nerd Font with Everything!    
 brew install --cask grandperspective                  # Disk Space Usage visualizer
 brew install --cask maccy                             # Clipboard Histroy
 brew install --cask microsoft-remote-desktop          # Because Windows
 brew install --cask parallels                         # Maybe some Windows?
+brew install --cask pinta                             # Paint Dot Net for macos
 brew install --cask skitch                            # Capture & Annotate your screen
 brew install --cask spotify                           # Amazing Music
 brew install --cask steam                             # Gaming is good

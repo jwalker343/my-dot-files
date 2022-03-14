@@ -5,8 +5,36 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:$PATH
+# =========================================================================== #
+#                                    PATH                                     #
+# =========================================================================== #
+
+# Set your Custom Paths that you want at the beginning of the PATH here.
+path=(
+  "$HOME/bin"
+  "/usr/local/bin"
+  "/opt/homebrew/bin"
+)
+
+# Dynamically add all of the GNU Tools to PATH from homebrew
+if type brew &>/dev/null; then
+  HOMEBREW_PREFIX=$(brew --prefix)
+  for d in ${HOMEBREW_PREFIX}/opt/*/libexec/gnubin; do export PATH=$d:$PATH; done
+fi
+
+# Add the default path entries here at the end.
+path+=(
+  "/usr/bin"
+  "/bin"
+  "/usr/sbin"
+  "/sbin"
+  "/opt/X11/bin"
+  "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+  "/Library/TeX/texbin"
+)
+# Make sure it is availble to sub processes.
+export PATH
+# export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/johnny.walker/git/oh-my-zsh"
@@ -79,16 +107,34 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+  my-aliases
+  auto-color-ls
+  aws
+  brew
   colored-man-pages
   colorize
-  extract
-  z
+  common-aliases
+  composer
+  copydir
+  copyfile
   docker
+  docker-compose
+  docker-machine
+  encode64
+  extract
+  extract
+  fzf
+  gcloud
   git
-  gnu-utils
-  auto-color-ls
+  git
+  git-flow
+  helm
+  kubectl
+  thefuck
+  web-search
+  z
   zsh-autosuggestions
+  zsh-interactive-cd
   )
 
 source $ZSH/oh-my-zsh.sh

@@ -2,6 +2,7 @@
 
 # Install Addons
 sudo gem install rubocop
+sudo gem install colorls
 
 #Initialize helm
 helm plugin install https://github.com/databus23/helm-diff
@@ -26,6 +27,4 @@ tar zxvf krew.tar.gz &&
     --manifest=krew.yaml --archive=krew.tar.gz
 
 # Kubectl Plugins
-kubectl krew install ingress-nginx
 kubectl krew install view-secret
-kubectl krew install tail
