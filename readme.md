@@ -14,6 +14,9 @@ There are application preferences and mac preferences that have not yet been scr
 # [Configure Peripherals](peripherals.md)
 Peripherals like keyboard, mouse, printers, etc...
 
+# Theme
+Global Color Scheme is [Base16](https://github.com/chriskempson/base16) "Default Dark". 
+
 # Credit & Source
 Shamelessly stolen from various online sources including but not limited to:
 - https://natelandau.com/my-mac-osx-bash_profile/
