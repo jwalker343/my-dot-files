@@ -49,7 +49,7 @@ path+=(
 export PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/johnny.walker/git/oh-my-zsh"
+export ZSH="$HOME/git/oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -127,7 +127,7 @@ plugins=(
   colorize
   common-aliases
   composer
-  copydir
+  copypath
   copyfile
   docker
   docker-compose

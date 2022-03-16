@@ -7,6 +7,7 @@ ln -s ~/git/my-dot-files/.inputrc ~/.inputrc
 ln -s ~/git/my-dot-files/.vimrc ~/.vimrc
 ln -s ~/git/my-dot-files/.tmux.conf ~/.tmux.conf
 ln -s ~/git/my-dot-files/.ssh-config ~/.ssh/config
+ln -s ~/git/my-dot-files/.p10k.zsh ~/.p10k.zsh
 
 # bug -- must by copied
 cp ~/git/my-dot-files/.finicky.js ~/.finicky.js
