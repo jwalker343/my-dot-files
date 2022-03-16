@@ -6,6 +6,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # =========================================================================== #
+#                                   Globals                                   #
+# =========================================================================== #
+HOMEBREW_PREFIX=""
+
+
+# =========================================================================== #
 #                                    PATH                                     #
 # =========================================================================== #
 
@@ -14,17 +20,24 @@ path=(
   "$HOME/bin"
   "/usr/local/bin"
   "/opt/homebrew/bin"
+  "/home/linuxbrew/.linuxbrew/bin"
+  "/home/linuxbrew/.linuxbrew/sbin"
+  "/usr/bin"
 )
 
-# Dynamically add all of the GNU Tools to PATH from homebrew
+# Set any Globals that require a base path
 if type brew &>/dev/null; then
   HOMEBREW_PREFIX=$(brew --prefix)
+fi
+
+# [MacOS Only] Dynamically add all of the GNU Tools to PATH from homebrew 
+if [[ $OSTYPE == "darwin"* ]]; then
   for d in ${HOMEBREW_PREFIX}/opt/*/libexec/gnubin; do export PATH=$d:$PATH; done
 fi
 
 # Add the default path entries here at the end.
 path+=(
-  "/usr/bin"
+  "/snap/bin"
   "/bin"
   "/usr/sbin"
   "/sbin"
@@ -34,7 +47,6 @@ path+=(
 )
 # Make sure it is availble to sub processes.
 export PATH
-# export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/johnny.walker/git/oh-my-zsh"
@@ -44,7 +56,7 @@ export ZSH="/Users/johnny.walker/git/oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+source $HOMEBREW_PREFIX/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

@@ -1,0 +1,5 @@
+Host *
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+  KexAlgorithms +diffie-hellman-group1-sha1
+  KexAlgorithms +diffie-hellman-group14-sha1

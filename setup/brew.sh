@@ -1,7 +1,18 @@
 #!/bin/bash
 
+# Setup Var
+os=$1
+
+
 # Install Brew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Activate Brew so we can use it
+if [ $os == "ubuntu" ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+elif [ $os == "darwin" ]; then
+  eval $(/opt/homebrew/bin/brew shellenv)
+fi
 
 # Install CLI tools from Brew
 
@@ -10,6 +21,7 @@ brew install bash                       # Update Bash
 brew install coreutils                  # Common Tools (cat, ls, etc..)
 brew install findutils                  # find, xargs, locate
 brew install gawk                       # Awk
+brew install gcc                        # C Compiler Update
 brew install gnu-sed                    # Sed
 brew install gnu-tar                    # Tar
 brew install gnu-which                  # Which
@@ -64,5 +76,5 @@ brew install httpie                     # Curl but with colors!
 brew install thefuck                    # Automatically Fix Errors
 brew install tldr                       # Shorter Man Pages
 brew install z                          # Shortcut for recent Dirs
+brew install pygments                   # Generic Syntax Highlighter
 brew install romkatv/powerlevel10k/powerlevel10k
-brew install pygments

@@ -11,9 +11,6 @@ cd; bash -c "`curl -fsSL https://raw.githubusercontent.com/jwalker343/my-dot-fil
 # [Configure Preferences and Applications](application_preferences.md)
 There are application preferences and mac preferences that have not yet been scripted out. This is where they are documented.
 
-# [Configure Peripherals](peripherals.md)
-Peripherals like keyboard, mouse, printers, etc...
-
 # Theme
 Global Color Scheme is [Base16](https://github.com/chriskempson/base16) "Default Dark". 
 
