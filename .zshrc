@@ -37,6 +37,7 @@ fi
 
 # Add the default path entries here at the end.
 path+=(
+  "$(ruby -e 'puts Gem.bindir')"
   "/snap/bin"
   "/bin"
   "/usr/sbin"
@@ -50,6 +51,12 @@ export PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/git/oh-my-zsh"
+
+
+# =========================================================================== #
+#                            Appearance/Behavior                              #
+# =========================================================================== #
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -109,6 +116,12 @@ COMPLETION_WAITING_DOTS="true"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
+
+
+# =========================================================================== #
+#                                   Plugins                                   #
+# =========================================================================== #
+
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -186,6 +199,21 @@ fi
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
-zstyle ':autocomplete:*' min-input 2  # int
 # Wait until this many characters have been typed, before showing completions.
+zstyle ':autocomplete:*' min-input 2  # int
+
+# If there are fewer than this many lines below the prompt, move the prompt up
+# to make room for showing this many lines of completions (approximately).
+zstyle ':autocomplete:*' list-lines 10  # int
+
+# Show this many history lines when pressing
+zstyle ':autocomplete:history-search:*' list-lines 10  # int
+
+# yes: Tab first tries Fzf's completion, then falls back to Zsh's.
 zstyle ':autocomplete:*' fzf-completion yes
+
+# =========================================================================== #
+#                                Key Bindings                                 #
+# =========================================================================== #
+
+bindkey '^I' autosuggest-accept

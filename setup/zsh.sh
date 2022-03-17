@@ -15,6 +15,10 @@ ln -s ~/git/my-dot-files/zsh-plugins/my-aliases/ ~/git/oh-my-zsh/custom/plugins/
 ln -s ~/git/my-dot-files/zsh-plugins/auto-color-ls/ ~/git/oh-my-zsh/custom/plugins/auto-color-ls;
 ln -s ~/git/my-dot-files/.zshrc ~/.zshrc
 
+# Clone in custom plugins:
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/git/oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/marlonrichert/zsh-autocomplete.git ~/git/oh-my-zsh/custom/plugins/zsh-autocomplete
+
 # For Ubuntu, we must set zsh as the default shell
 if [ $os == "ubuntu" ]; then
   echo $(which zsh) | sudo tee -a /etc/shells

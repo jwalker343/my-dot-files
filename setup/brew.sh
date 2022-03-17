@@ -47,7 +47,8 @@ brew install go                         # Go Programming Language
 brew install jq                         # Process JSON files in bash
 brew install node                       # node
 brew install php@7.2                    # Install PHP 7.2
-Brew install php@8.1                    # Install PHP 8.1
+brew install php@8.1                    # Install PHP 8.1
+brew install ruby                       # Ruby Programming Language
 brew install shellcheck                 # Lint bash scripts
 brew install yarn                       # yarn for node
 
