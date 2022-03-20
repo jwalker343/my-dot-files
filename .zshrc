@@ -45,6 +45,7 @@ path+=(
   "/opt/X11/bin"
   "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
   "/Library/TeX/texbin"
+  "/mnt/c/Program Files/Microsoft VS Code/bin"
 )
 # Make sure it is availble to sub processes.
 export PATH
@@ -217,3 +218,6 @@ zstyle ':autocomplete:*' fzf-completion yes
 # =========================================================================== #
 
 bindkey '^I' autosuggest-accept
+
+
+#export KUBECONFIG=$(for YAML in $(find ${HOME}/.kube -name '*.yaml') ; do echo -n ":${YAML}"; done)
