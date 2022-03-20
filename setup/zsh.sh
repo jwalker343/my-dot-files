@@ -9,10 +9,12 @@ ZSH=~/git/oh-my-zsh sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzs
 # Link Custom Configs to ZSH
 rm -rf ~/git/oh-my-zsh/custom/plugins/my-aliases
 rm -rf ~/git/oh-my-zsh/custom/plugins/auto-color-ls
+rm -rf ~/git/oh-my-zsh/custom/plugins/kubeconfig
 rm -f ~/.zshrc
 
 ln -s ~/git/my-dot-files/zsh-plugins/my-aliases/ ~/git/oh-my-zsh/custom/plugins/my-aliases;
 ln -s ~/git/my-dot-files/zsh-plugins/auto-color-ls/ ~/git/oh-my-zsh/custom/plugins/auto-color-ls;
+ln -s ~/git/my-dot-files/zsh-plugins/kubeconfig/ ~/git/oh-my-zsh/custom/plugins/kubeconfig;
 ln -s ~/git/my-dot-files/.zshrc ~/.zshrc
 
 # Clone in custom plugins:
