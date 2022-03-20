@@ -217,7 +217,6 @@ zstyle ':autocomplete:*' fzf-completion yes
 #                                Key Bindings                                 #
 # =========================================================================== #
 
-bindkey '^I' autosuggest-accept
-
+bindkey '^I' forward-word
 
 #export KUBECONFIG=$(for YAML in $(find ${HOME}/.kube -name '*.yaml') ; do echo -n ":${YAML}"; done)
