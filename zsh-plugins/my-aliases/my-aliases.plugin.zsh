@@ -33,6 +33,7 @@ alias please="fuck"			                    # Make fuck more pleasant
 alias hr="hr \~ && hr = && hr \~"           # Horizontal Rule
 alias cls="clear;echo 'Directory:';ls"      # Clear Screen and show directory
 alias myip='curl ipinfo.io | jq'            # Public facing IP Address
+alias console="minicom -D /dev/tty.usb* -b 9600"  # have good serial app
 
 # Kubectl & Kubernetes
 alias kci="kubectl cluster-info; kubectl get nodes; kubectl get namespaces"

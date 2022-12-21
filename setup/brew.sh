@@ -62,6 +62,7 @@ brew install kustomize                  # Structured kubernetes yaml files
 
 # Tech Tools
 brew install ipcalc                     # CLI IP/subnet calc
+brew install minicom                    # Better than Screen
 brew install nmap                       # Network scanning tool
 brew install speedtest_cli              # Speed test from CLI
 brew install telnet                     # telnet client

@@ -110,17 +110,15 @@ plugins+=(
   docker-machine
   encode64
   extract
-  extract
   fzf
   gcloud
-  git
   git
   git-flow
   helm
   kubectl
   thefuck
   web-search
-  z
+  zoxide
   zsh-autocomplete
   zsh-autosuggestions
   )
@@ -160,10 +158,10 @@ zstyle ':autocomplete:*' min-input 2  # int
 
 # If there are fewer than this many lines below the prompt, move the prompt up
 # to make room for showing this many lines of completions (approximately).
-zstyle ':autocomplete:*' list-lines 10  # int
+zstyle ':autocomplete:*' list-lines 5  # int
 
 # Show this many history lines when pressing
-zstyle ':autocomplete:history-search:*' list-lines 10  # int
+zstyle ':autocomplete:history-search:*' list-lines 5  # int
 
 # yes: Tab first tries Fzf's completion, then falls back to Zsh's.
 zstyle ':autocomplete:*' fzf-completion yes
@@ -172,4 +170,4 @@ zstyle ':autocomplete:*' fzf-completion yes
 #                                Key Bindings                                 #
 # =========================================================================== #
 
-bindkey '^I' forward-word
+#bindkey '^I' forward-word
