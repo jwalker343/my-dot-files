@@ -42,6 +42,10 @@ alias kex="kubectl exec -i -t"
 alias kns="kubens"
 alias kctx="kubectx"
 
+# Programming Aliases
+alias python="python3"
+
+
 # MacOS Specific
 if [[ $OSTYPE == "darwin"* ]]; then
   alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
