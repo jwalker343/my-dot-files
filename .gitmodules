@@ -1,0 +1,4 @@
+[submodule "tomorrow-theme"]
+	path = tomorrow-theme
+	url = https://github.com/chriskempson/tomorrow-theme
+	branch = master
