@@ -76,7 +76,7 @@ cd; git clone "https://github.com/jwalker343/my-dot-files.git" "$DOTFILE_GIT_DIR
     fi
 
 # Link up the dot files
-    bash -c "./setup/link-config-files.sh"
+    bash -c "./setup/link-config-files.sh $os"
 
 # Setup Vim
     bash -c "./setup/vim.sh"
@@ -84,13 +84,13 @@ cd; git clone "https://github.com/jwalker343/my-dot-files.git" "$DOTFILE_GIT_DIR
 # Setup motd header on terminals
     bash -c "./setup/motd.sh $os"
 
-# Configure OSX Settings
+# Configure OS Settings
     if [ $os == "darwin" ]; then
         bash -c "./setup/macos.sh"
     fi
 
 # Other configuration
-    bash -c "./setup/addons.sh"
+    bash -c "./setup/addons.sh $os"
 
 # Setup ZSH
     bash -c "./setup/zsh.sh $os"
