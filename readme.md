@@ -12,7 +12,7 @@ cd; bash -c "`curl -fsSL https://raw.githubusercontent.com/jwalker343/my-dot-fil
 There are application preferences and mac preferences that have not yet been scripted out. This is where they are documented.
 
 # Theme
-Global Color Scheme is [Base16](https://github.com/chriskempson/base16) "Default Dark". 
+Global Color Scheme is [Tomorrow Night](https://github.com/chriskempson/tomorrow-theme). 
 
 # Credit & Source
 Shamelessly stolen from various online sources including but not limited to:
@@ -20,4 +20,5 @@ Shamelessly stolen from various online sources including but not limited to:
 - https://gist.github.com/natelandau/10654137
 - http://www.spinen.com
 - https://github.com/webpro/dotfiles
+- https://github.com/chriskempson/tomorrow-theme
 - Many other wonderful people
