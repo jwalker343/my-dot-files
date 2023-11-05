@@ -45,6 +45,7 @@ brew install git-crypt                  # Encrypt files in git
 brew install git-flow                   # Better git methodoligies
 brew install go                         # Go Programming Language
 brew install jq                         # Process JSON files in bash
+brew install ruby                       # Ruby Programming Language
 
 # Kubernetes
 brew install kubernetes-cli             # Kubernetes
@@ -70,4 +71,9 @@ brew install httpie                     # Curl but with colors!
 brew install thefuck                    # Automatically Fix Errors
 brew install tldr                       # Shorter Man Pages
 brew install z                          # Shortcut for recent Dirs
+<<<<<<< HEAD
 brew install powerlevel10k               # Shell Prompt
+=======
+brew install romkatv/powerlevel10k/powerlevel10k
+brew install lsd                        # Better ls
+>>>>>>> 0adef23 (fix)
