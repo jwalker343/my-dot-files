@@ -52,6 +52,7 @@ brew install kubernetes-cli             # Kubernetes
 brew install helm                       # Kubernetes Helm Client
 brew install helmfile                   # Declarative Helm Installations
 brew install kubectx                    # Interactive kube context switching
+brew install krew                       # Kubectl plugin manager
 
 # Tech Tools
 brew install ipcalc                     # CLI IP/subnet calc
