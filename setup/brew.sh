@@ -70,4 +70,4 @@ brew install httpie                     # Curl but with colors!
 brew install thefuck                    # Automatically Fix Errors
 brew install tldr                       # Shorter Man Pages
 brew install z                          # Shortcut for recent Dirs
-brew install romkatv/powerlevel10k/powerlevel10k
+brew install powerlevel10k               # Shell Prompt

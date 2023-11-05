@@ -5,7 +5,7 @@ _Tested with: **10.14 Mojave**_
 
 ```bash
 export DOTFILE_GIT_DIRECTORY="$HOME/Documents/git"
-cd; bash -c "`curl -fsSL https://raw.githubusercontent.com/jwalker343/my-dot-files/master/install.sh`"
+cd; curl https://raw.githubusercontent.com/jwalker343/my-dot-files/master/install.sh | bash
 ```
 
 # [Configure Preferences and Applications](application_preferences.md)
