@@ -70,7 +70,8 @@ export ZSH="$HOME/git/oh-my-zsh"
 # Set name of the theme to load
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell" # For Builtin, otherwise Source it.
-source $HOMEBREW_PREFIX/opt/powerlevel10k/powerlevel10k.zsh-theme
+#source $HOMEBREW_PREFIX/opt/powerlevel10k/share/powerlevel10k.zsh-theme
+source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -91,7 +92,6 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 
 # My Plugins
 plugins=(
-  auto-color-ls
   kubeconfig
   my-aliases
 )

@@ -23,10 +23,12 @@ alias .2='cd ../../'						            # Go back 2 directory levels
 alias .3='cd ../../../'                     # Go back 3 directory levels
 
 # List Directory aliases (ls)
-alias ls='colorls --sd'                     # Colorized, Sort Dirs on top
-alias lsl='colorls -1 -A --sd'              # Colorized, list view, show most, Sort Dirs on top
-alias lsal='colorls -a -l'                  # Colorized, Detail View, Show All, Alphabetized
-alias lst='colorls -A --tree=2'             # Colorized, Tree View, 2 deep, show most
+alias ls='lsd'                              # Colorized, Sort Dirs on top
+alias lsl='lsd --oneline'                   # Colorized, list view, show most, Sort Dirs on top
+alias lsal='lsd --long'                     # Colorized, Detail View, Show All, Alphabetized
+alias lst='lsd --tree --depth 2'            # Colorized, Tree View, 2 deep, show most
+alias lsize='lsd -l -S --total-size'        # Colorized, Sort by Size
+alias ldate="lsd -l -t -r"                  # Colorized, sort date, new at bottom
 
 # General
 alias please="fuck"			                    # Make fuck more pleasant

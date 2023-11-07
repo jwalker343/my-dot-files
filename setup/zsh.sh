@@ -26,3 +26,6 @@ if [ $os == "ubuntu" ]; then
   echo $(which zsh) | sudo tee -a /etc/shells
   chsh -s $(which zsh)
 fi
+
+# Create secrets file to store custom exports
+touch ~/git/my-dot-files/envvar.secret

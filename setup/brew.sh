@@ -35,6 +35,7 @@ brew install gpg                        # Encrypt all the things
 brew install parallel                   # GNU Parallel / execute jobs in parallel
 brew install tmux                       # Terminal Multiplexer
 brew install watch                      # Watch a command output over time
+brew install zsh                        # Better shell
 
 # Developer
 brew install git                        # Source Control
@@ -71,7 +72,7 @@ brew install hr                         # <hr /> for terminal
 brew install httpie                     # Curl but with colors!
 brew install thefuck                    # Automatically Fix Errors
 brew install tldr                       # Shorter Man Pages
-brew install z                          # Shortcut for recent Dirs
+brew install zoxide                     # Shortcut for recent Dirs
 <<<<<<< HEAD
 brew install powerlevel10k               # Shell Prompt
 =======

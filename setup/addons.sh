@@ -16,6 +16,3 @@ helm plugin install https://github.com/databus23/helm-diff
 
 # Install Tmux Plugin Manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-
-
