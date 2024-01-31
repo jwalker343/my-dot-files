@@ -73,9 +73,5 @@ brew install httpie                     # Curl but with colors!
 brew install thefuck                    # Automatically Fix Errors
 brew install tldr                       # Shorter Man Pages
 brew install zoxide                     # Shortcut for recent Dirs
-<<<<<<< HEAD
-brew install powerlevel10k               # Shell Prompt
-=======
 brew install romkatv/powerlevel10k/powerlevel10k
 brew install lsd                        # Better ls
->>>>>>> 0adef23 (fix)
