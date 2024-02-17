@@ -76,3 +76,4 @@ brew install zoxide                     # Shortcut for recent Dirs
 brew install powerlevel10k              # Shell Prompt
 brew install lsd                        # Better ls
 brew install pygmentize                 # Syntax Colorized neede by Zsh
+brew install lsd                        # Better ls
