@@ -24,6 +24,7 @@ brew install --cask quicklook-json                    # JSON Files
 
 # Productivity
 brew install --cask adobe-acrobat-reader              # The Standard PDF Reader
+brew install --cask alfred                            # Better than spotlight!
 brew install --cask drawio                            # For Diagrams and FlowCharts
 brew install --cask google-drive                      # Google Drive
 brew install --cask microsoft-office                  # Word, Excel, Outlook, OneDrive
