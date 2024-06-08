@@ -78,7 +78,8 @@ source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
-zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode disabled    # Disables Updates
 
 # This will check for updates every 30 days
 zstyle ':omz:update' frequency 30
