@@ -102,12 +102,10 @@ plugins=(
 
 # Built-in/copied in Plugins
 plugins+=(
-  aws
   brew
   colored-man-pages
   colorize
   common-aliases
-  composer
   copyfile
   copypath
   docker
@@ -116,13 +114,11 @@ plugins+=(
   encode64
   extract
   fzf
-  gcloud
   git
   git-flow
   helm
   kubectl
   thefuck
-  web-search
   zoxide
   zsh-autocomplete
   zsh-autosuggestions
