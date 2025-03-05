@@ -5,51 +5,66 @@ Sign into apple ID for app-store and install the following apps:
 - Monosnap
 
 # Mac System Preferences
-**General**
-- Appearance: Dark Mode
-- Hightlight Color: Green
-- Show scroll bars automatically when scrolling
-- Default browser set to Chrome
 
-**Desktop**
-- Picture (Not Dynamic)
-- Change automatically every 5 minutes
-- Random order
-- Folder > Google Drive > Wallpapers
+**Accessibility**
+- Zoom > Use scroll gesture with modifier keys to zoom (Control Key.)
+- Advanced > Zoomed Image Moves (Continuously with pointer)
+
+**Appearance**
+- Appearance: Dark Mode
+- Highlight Color: Blue
+- Show scroll bars automatically when scrolling
+
+**Control Center**
+- Modules:
+    - Bluetooth: Show in Menu Bar
+    - Screen Mirroring: Show In Menu Bar
+    - Sound: Show in Menu Bar
+- Battery
+    - Show Percentage
+- Menu Bar Section > Clock
+    - Show Date: Always
+    - Display the time with seconds
+
+**Desktop & Dock**
+- Dock
+    - Size 33%
+    - Magnification 75%
+    - Position Left
+    - Minimize using Scale
+    - Minimize windows into application icon
+    - Auto Hide and Show
+    - Show indicators for open apps
+    - Uncheck show recent applications in Dock
+- Default Web Browser: Chrome
+- Mission Control
+    - uncheck auto rearrange spaces based on usage
+
+**Display**
+- Uncheck auto adjust for display brightness
+- Select "Scaled" & More Space
+- Night Shift: Enabled (Automatic)
 
 **Screen Saver**
-- Ken Burns > Folder > Google Drive > Wallpapers
-- Start after 5 minutes
-
-**Dock**
-- Size 33%
-- Magnification 75%
-- Position Left
-- Minimize using Scale
-- Minimize windows into application icon
-- Auto Hide and Show
-- Show indicators for open apps
-- Uncheck show recent applications in Dock
-
-**Mission Control**
-- uncheck auto rearrange spaces based on usage
+- Other > Photos
+- Style: Ken Burns
+- Photo Options: Choose Google Drive > Wallpapers
 
 **Spotlight**
 - uncheck music movies fonts
 - make sure search shortcut is cmd+Space
+- Uncheck Help Apple make search better
 
-**Accessibility**
-- Zoom > Use scroll gesture with modifier keys to zoom (Control Key.)
+**Wallpaper**
+- Add Folder or album, Choose Google Drive > Wallpapers
 
-**Extensions**
-- Added Extensions... Check All
-- Share Menu
-    - Remove as much as possible except copy link
+**Sound**
+- Play Feedback when volume is changed
 
-**Security and Privacy**
-- Require pass after 5 minutes
-- show message: "This Computer is Locked."
-- Allow apps from anywhere
+**Lock Screen**
+- display off after 3 minutes
+
+**Privacy & Security**
 - Full Disk Access
     - Check Terminal
 - Developer Tools
@@ -60,44 +75,19 @@ Sign into apple ID for app-store and install the following apps:
     - Accessibility
         - You will need to open these apps first:
         - allow BetterTouchTool
-
-**Networking**
-- Go update DHCP reservations for your wifi and ethernet nics
-
-**bluetooth**
-- show bluetooth in menu bar
-
-**Sound**
-- Play Feedback when volume is changed
-
+     
 **Keyboard**
 - Key Repeat is Fastest
 - delay is short
-- Shortcuts
+- Keyboard Shortcuts
     - Mission Control: remove show desktop
 
 **Trackpad/Mouse**
 - Uncheck Scroll Direction Natural
-- Swipe between full-screen apps = 4 fingers
+- Swipe between full-screen apps = 3 fingers
 - Mission Control = 4 fingers
 - App Exposé = 4 fingers
 - uncheck launchpad gesture
-
-**Display**
-- Uncheck auto adjust for display brightness
-- Select "Scaled" & More Space 
-- Enable Night Shift
-
-**Battery**
-- Battery
-    - display off after 3 minutes
-    - slightly dim
-- Power
-    - Display off 3 hours
-    - Wake for Wi-Fi network access
-
-**Date & Time**
-- display the time with seconds
 
 # Application Preferences
 
