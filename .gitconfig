@@ -4,7 +4,7 @@
 	editor = vim
 [user]
 	name = Johnny Walker
-	email = johnny.walker@spinen.com
+	email = johnny.walker@tylertech.com
 [credential]
 	helper = cache
 [push]
@@ -23,3 +23,5 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[init]
+	defaultBranch = main

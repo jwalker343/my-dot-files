@@ -10,7 +10,6 @@
 # Icon must end with two \r
 Icon
 
-
 # Thumbnails
 ._*
 
@@ -58,3 +57,49 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# ---------------------------------------------------------
+# Linux.gitignore 
+# github.com/github/gitignore/blob/master/Global/Linux.gitignore
+# ---------------------------------------------------------
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+# Log files created by default by the nohup command
+nohup.out
+
+
+# ---------------------------------------------------------
+# VisualStudioCode.gitignore 
+# github.com/github/gitignore/blob/master/Global/VisualStudioCode.gitignore
+# ---------------------------------------------------------
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+!*.code-workspace
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+
+# ---------------------------------------------------------
+# Agents.gitignore 
+# github.com/github/gitignore/blob/main/Global/Agents.gitignore
+# ---------------------------------------------------------
+
+# Claude Code
+.claude/*.local.json
+.claude/**/*.log
+CLAUDE.local.md
