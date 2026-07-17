@@ -19,7 +19,6 @@ ln -s ~/git/my-dot-files/.zshrc ~/.zshrc
 
 # Clone in custom plugins:
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/git/oh-my-zsh/custom/plugins/zsh-autosuggestions
-git clone https://github.com/marlonrichert/zsh-autocomplete.git ~/git/oh-my-zsh/custom/plugins/zsh-autocomplete
 
 # For Ubuntu, we must set zsh as the default shell
 if [ $os == "ubuntu" ]; then

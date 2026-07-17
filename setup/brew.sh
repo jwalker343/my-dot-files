@@ -42,6 +42,7 @@ brew install git                        # Source Control
 brew install cfssl                      # Cloudflare's PKI/TLS toolkit
 brew install composer                   # PHP Package Management
 brew install diff-so-fancy              # Better diff tolls for GIT
+brew install gh                         # GitHub CLI
 brew install git-crypt                  # Encrypt files in git
 brew install git-flow                   # Better git methodoligies
 brew install go                         # Go Programming Language

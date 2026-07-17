@@ -13,6 +13,7 @@ fi
 # =========================================================================== #
 HOMEBREW_PREFIX=""
 export LANG=en_US.UTF-8
+export BROWSER="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
 
 
 # =========================================================================== #
@@ -33,8 +34,11 @@ if [[ $OSTYPE == "linux"* ]]; then
     "/home/linuxbrew/.linuxbrew/bin"
     "/home/linuxbrew/.linuxbrew/sbin"
     "/mnt/c/Program Files/Microsoft VS Code/bin"
+    "/mnt/c/Users/johnny.walker/AppData/Local/Programs/Microsoft VS Code/bin"
+    "/mnt/c/Windows/System32/WindowsPowerShell/v1.0"
     "/snap/bin"
-  )
+    "$HOME/.local/bin"
+)
 fi
 
 # Set any Globals that require a base path
@@ -49,7 +53,6 @@ fi
 
 # Add the default path entries here at the end.
 path+=(
-  "$(ruby -e 'puts Gem.bindir')"
   "/bin"
   "/usr/sbin"
   "/sbin"
@@ -99,21 +102,20 @@ zstyle ':omz:update' frequency 30
 
 # My Plugins
 plugins=(
-  kubeconfig
+  #kubeconfig
   my-aliases
 )
 
 # Built-in/copied in Plugins
 plugins+=(
+  aws
   brew
   colored-man-pages
   colorize
-  common-aliases
   copyfile
   copypath
   docker
   docker-compose
-  docker-machine
   encode64
   extract
   fzf
@@ -123,7 +125,6 @@ plugins+=(
   kubectl
   thefuck
   zoxide
-  zsh-autocomplete
   zsh-autosuggestions
   )
 
@@ -171,11 +172,9 @@ zstyle ':autocomplete:history-search:*' list-lines 5  # int
 zstyle ':autocomplete:*' fzf-completion yes
 
 # =========================================================================== #
-#                                Key Bindings                                 #
+#                         Global Environment Variables                        #
 # =========================================================================== #
 
-#bindkey '^I' forward-word
-
-
-# Run Profiler
-#zprof
+# note: we use .zshenv for machine or profile specific env variables (work/school/personal)
+export CLAUDE_CODE_ENABLE_AUTO_MODE=1
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#456666"
