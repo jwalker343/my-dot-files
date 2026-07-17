@@ -22,6 +22,7 @@ export BROWSER="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
 
 # Set your Custom Paths that you want at the beginning of the PATH here.
 path=(
+  "$HOME/.local/bin"
   "$HOME/bin"
   "/usr/local/bin"
   "/opt/homebrew/bin"
