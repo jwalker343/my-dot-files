@@ -21,6 +21,7 @@ export LANG=en_US.UTF-8
 
 # Set your Custom Paths that you want at the beginning of the PATH here.
 path=(
+  "$HOME/.local/bin"
   "$HOME/bin"
   "/usr/local/bin"
   "/opt/homebrew/bin"
