@@ -2,9 +2,8 @@
 	excludesfile = ~/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	editor = vim
-[user]
-	name = Johnny Walker
-	email = johnny.walker@tylertech.com
+[include]
+	path = ~/.gitconfig.local
 [credential]
 	helper = cache
 [push]

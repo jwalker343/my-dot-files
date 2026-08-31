@@ -12,3 +12,16 @@ ln -s ~/git/my-dot-files/lsd-config.yaml ~/.config/lsd/config.yaml
 
 # bug -- must by copied
 cp ~/git/my-dot-files/.finicky.js ~/.finicky.js
+
+# Per-machine git identity (never tracked in the repo)
+if [ ! -f ~/.gitconfig.local ]; then
+    echo
+    echo "No ~/.gitconfig.local found -- set the git identity for this machine."
+    read -p "Git user.name: " git_user_name
+    read -p "Git user.email: " git_user_email
+    cat > ~/.gitconfig.local <<EOF
+[user]
+	name = $git_user_name
+	email = $git_user_email
+EOF
+fi

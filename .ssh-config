@@ -4,16 +4,8 @@ Host *
   KexAlgorithms +diffie-hellman-group1-sha1
   KexAlgorithms +diffie-hellman-group14-sha1
 
-# Personal GitHub Account
-Host github.com-personal
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_ed25519_personal
-    IdentitiesOnly yes
-
-# Work GitHub Account
 Host github.com
     HostName github.com
     User git
-    IdentityFile ~/.ssh/id_ed25519_work
+    IdentityFile ~/.ssh/id_ed25519
     IdentitiesOnly yes

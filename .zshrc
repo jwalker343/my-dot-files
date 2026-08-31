@@ -103,7 +103,7 @@ zstyle ':omz:update' frequency 30
 
 # My Plugins
 plugins=(
-  #kubeconfig
+  kubeconfig
   my-aliases
 )
 
