@@ -159,18 +159,17 @@ fi
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
-# Wait until this many characters have been typed, before showing completions.
-zstyle ':autocomplete:*' min-input 2  # int
+# =========================================================================== #
+#                                   History                                   #
+# =========================================================================== #
 
-# If there are fewer than this many lines below the prompt, move the prompt up
-# to make room for showing this many lines of completions (approximately).
-zstyle ':autocomplete:*' list-lines 5  # int
-
-# Show this many history lines when pressing
-zstyle ':autocomplete:history-search:*' list-lines 5  # int
-
-# yes: Tab first tries Fzf's completion, then falls back to Zsh's.
-zstyle ':autocomplete:*' fzf-completion yes
+HISTSIZE=50000
+SAVEHIST=50000
+setopt SHARE_HISTORY       # share history across all sessions, live
+setopt INC_APPEND_HISTORY  # write each command as it's run, not on shell exit
+setopt HIST_IGNORE_ALL_DUPS # drop older duplicate of a repeated command
+setopt HIST_IGNORE_SPACE   # don't record commands starting with a space
+setopt HIST_REDUCE_BLANKS  # trim superfluous blanks before recording
 
 # =========================================================================== #
 #                         Global Environment Variables                        #
