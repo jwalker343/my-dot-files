@@ -10,9 +10,6 @@ ln -s ~/git/my-dot-files/.ssh-config ~/.ssh/config
 ln -s ~/git/my-dot-files/.p10k.zsh ~/.p10k.zsh
 ln -s ~/git/my-dot-files/lsd-config.yaml ~/.config/lsd/config.yaml
 
-# bug -- must by copied
-cp ~/git/my-dot-files/.finicky.js ~/.finicky.js
-
 # Per-machine git identity (never tracked in the repo)
 if [ ! -f ~/.gitconfig.local ]; then
     echo
