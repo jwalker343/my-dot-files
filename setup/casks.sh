@@ -48,7 +48,6 @@ brew install --cask balenaetcher                      # Bootable USB drive Maker
 brew install --cask bettertouchtool                   # Customize mouse, keyboard, touchbar
 brew install --cask caffeine                          # Keeps your screen awake
 brew install --cask cyberduck                         # FTP and SCP Tool
-brew install --cask finicky                           # Default Web Broswer Routing
 brew install --cask font-fira-code                    # Font with Ligatures
 brew install font-Fira-Code-nerd-font                 # Nerd Font with Everything!    
 brew install --cask grandperspective                  # Disk Space Usage visualizer
