@@ -9,6 +9,7 @@ ln -s ~/git/my-dot-files/.tmux.conf ~/.tmux.conf
 ln -s ~/git/my-dot-files/.ssh-config ~/.ssh/config
 ln -s ~/git/my-dot-files/.p10k.zsh ~/.p10k.zsh
 ln -s ~/git/my-dot-files/lsd-config.yaml ~/.config/lsd/config.yaml
+ln -s ~/git/my-dot-files/delta-themes.gitconfig ~/.config/delta/themes.gitconfig
 
 # Per-machine git identity (never tracked in the repo)
 if [ ! -f ~/.gitconfig.local ]; then
