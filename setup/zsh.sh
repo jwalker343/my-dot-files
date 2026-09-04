@@ -24,5 +24,5 @@ if [ $os == "ubuntu" ]; then
   chsh -s $(which zsh)
 fi
 
-# Create secrets file to store custom exports
-touch ~/git/my-dot-files/envvar.secret
+# Create .zshenv to store machine/profile specific secrets and env vars
+touch ~/.zshenv

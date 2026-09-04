@@ -1,6 +1,6 @@
 # Bootstrap this repository
 Get started in a hurry on a fresh mac installation. This takes care of most of the brew and and base config.
-
+asdf
 _Tested with: **10.14 Mojave**_
 
 ```bash

@@ -26,7 +26,6 @@ path=(
   "$HOME/bin"
   "/usr/local/bin"
   "/opt/homebrew/bin"
-  "/usr/bin"
 )
 
 # Add in some Linux Specific Paths (WSL)
@@ -42,18 +41,9 @@ if [[ $OSTYPE == "linux"* ]]; then
 )
 fi
 
-# Set any Globals that require a base path
-if type brew &>/dev/null; then
-  HOMEBREW_PREFIX=$(brew --prefix)
-fi
-
-# [MacOS Only] Dynamically add all of the GNU Tools to PATH from homebrew 
-if [[ $OSTYPE == "darwin"* ]]; then
-  for d in ${HOMEBREW_PREFIX}/opt/*/libexec/gnubin; do export PATH=$d:$PATH; done
-fi
-
 # Add the default path entries here at the end.
 path+=(
+  "/usr/bin"
   "/bin"
   "/usr/sbin"
   "/sbin"
@@ -61,6 +51,16 @@ path+=(
   "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
   "/Library/TeX/texbin"
 )
+
+# Set any Globals that require a base path
+if type brew &>/dev/null; then
+  HOMEBREW_PREFIX=$(brew --prefix)
+fi
+
+# [MacOS Only] Dynamically add all of the GNU Tools to PATH from homebrew
+if [[ $OSTYPE == "darwin"* ]]; then
+  for d in ${HOMEBREW_PREFIX}/opt/*/libexec/gnubin; do export PATH=$d:$PATH; done
+fi
 
 # Make sure it is availble to sub processes.
 export PATH
@@ -135,9 +135,6 @@ source $ZSH/oh-my-zsh.sh
 #                             Additional Sources                              #
 # =========================================================================== #
 
-
-# Pull in Env Var Secrets
-source $HOME/git/my-dot-files/envvar.secret
 
 
 # =========================================================================== #

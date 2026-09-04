@@ -191,7 +191,7 @@ Sign into apple ID for app-store and install the following apps:
 
 # Configure Keys and Secrets:
 
-- Create the ~/git/my-dot-files/envvar.secret file with your github key
+- Add to the ~/.zshenv file with your github key
     - `export HOMEBREW_GITHUB_API_TOKEN=XXXXXXXXXXXXXXXXX`
 - Copy your ssh key from `~/.ssh/id_rsa` and `~/.ssh/id_rsa.pub`  from old machine
 - Export and move your GPG key over and configure it with git-crypt:
