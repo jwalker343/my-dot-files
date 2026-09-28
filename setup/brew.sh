@@ -30,8 +30,6 @@ brew install make                       # Update make
 brew install wget                       # Wget
 
 # General
-brew install bash-completion@2          # Because lazy
-brew install gpg                        # Encrypt all the things
 brew install parallel                   # GNU Parallel / execute jobs in parallel
 brew install tmux                       # Terminal Multiplexer
 brew install watch                      # Watch a command output over time
@@ -40,14 +38,14 @@ brew install zsh                        # Better shell
 # Developer
 brew install git                        # Source Control
 brew install cfssl                      # Cloudflare's PKI/TLS toolkit
-brew install composer                   # PHP Package Management
 brew install git-delta                  # Better diff/pager for GIT
 brew install gh                         # GitHub CLI
-brew install git-crypt                  # Encrypt files in git
 brew install git-flow                   # Better git methodoligies
-brew install go                         # Go Programming Language
 brew install jq                         # Process JSON files in bash
-brew install ruby                       # Ruby Programming Language
+brew install yq                         # Process YAML files
+brew install python@3.14                # Python Programming Language
+brew install pyenv                      # Python Virtual Environments
+brew install docker                     # Containers!
 
 # Kubernetes
 brew install kubernetes-cli             # Kubernetes
@@ -65,7 +63,6 @@ brew install telnet                     # telnet client
 
 # Cloud
 brew install awscli                     # AWS Command Line Client
-brew install azure-cli                  # Azure Command Line Client
 
 # Awesomeness
 brew install fzf                        # fuzzy completion
@@ -74,7 +71,5 @@ brew install httpie                     # Curl but with colors!
 brew install thefuck                    # Automatically Fix Errors
 brew install tldr                       # Shorter Man Pages
 brew install zoxide                     # Shortcut for recent Dirs
-brew install powerlevel10k              # Shell Prompt
 brew install lsd                        # Better ls
-brew install pygmentize                 # Syntax Colorized neede by Zsh
-brew install lsd                        # Better ls
+brew install pygmentize                 # Syntax Colorized needed by Zsh
