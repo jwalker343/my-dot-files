@@ -6,13 +6,16 @@
 while true; do
     echo
     echo "Dot Files will be cloned into \"$DOTFILE_GIT_DIRECTORY/my-dot-files/\""
-    read -p "Do you wish to install the dot-files? (Y/N)" yn
-    case $yn in
-        [Yy]* ) break;;
-        [Nn]* ) exit;;
-        * ) echo "Please answer yes (y) or no (n).";;
+
+    read -r -p "Do you wish to install the dot-files? (Y/N) " yn </dev/tty
+
+    case "$yn" in
+        [Yy]*) break ;;
+        [Nn]*) exit 0 ;;
+        *) echo "Please answer yes (y) or no (n)." ;;
     esac
 done
+
 
 #
 # Get an Operating System so we can tailor the install
