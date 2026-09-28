@@ -72,4 +72,4 @@ brew install thefuck                    # Automatically Fix Errors
 brew install tldr                       # Shorter Man Pages
 brew install zoxide                     # Shortcut for recent Dirs
 brew install lsd                        # Better ls
-brew install pygmentize                 # Syntax Colorized needed by Zsh
+brew install pygments                   # Syntax Colorized needed by Zsh
