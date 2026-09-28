@@ -21,10 +21,20 @@ done
 # Get an Operating System so we can tailor the install
 # 
 echo "Please Select an Operating System:"
-select os in darwin ubuntu
-    do echo $os
-    break
-done
+
+select os in darwin ubuntu; do
+    case "$os" in
+        darwin|ubuntu)
+            break
+            ;;
+        *)
+            echo "Invalid selection."
+            ;;
+    esac
+done < /dev/tty
+
+echo "Selected: $os"
+
 
 #
 # Ask for the administrator password upfront
