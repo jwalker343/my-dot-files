@@ -19,7 +19,7 @@ ln -s ~/git/my-dot-files/.zshrc ~/.zshrc
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/git/oh-my-zsh/custom/plugins/zsh-autosuggestions
 
 # For Ubuntu, we must set zsh as the default shell
-if [ $os == "ubuntu" ]; then
+if [[ $os == "ubuntu" ]]; then
   echo $(which zsh) | sudo tee -a /etc/shells
   chsh -s $(which zsh)
 fi
