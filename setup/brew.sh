@@ -34,6 +34,7 @@ brew install parallel                   # GNU Parallel / execute jobs in paralle
 brew install tmux                       # Terminal Multiplexer
 brew install watch                      # Watch a command output over time
 brew install zsh                        # Better shell
+brew install powerlevel10k              # Better zsh theme
 
 # Developer
 brew install git                        # Source Control
