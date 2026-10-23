@@ -1,6 +1,13 @@
 # Load Profiler if needed
 #zmodload zsh/zprof
 
+# Show the motd on login shells. Must print above the p10k instant prompt, which
+# warns about console output during init. Skipped over SSH, where PAM already prints it,
+# and on macOS, where login(1) already prints it.
+if [[ -o login && -o interactive && -z $SSH_CONNECTION && $OSTYPE != darwin* && -s /etc/motd ]]; then
+  command cat /etc/motd
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -34,7 +41,7 @@ if [[ $OSTYPE == "linux"* ]]; then
     "/home/linuxbrew/.linuxbrew/bin"
     "/home/linuxbrew/.linuxbrew/sbin"
     "/mnt/c/Program Files/Microsoft VS Code/bin"
-    "/mnt/c/Users/johnny.walker/AppData/Local/Programs/Microsoft VS Code/bin"
+    /mnt/c/Users/*/AppData/Local/Programs/Microsoft\ VS\ Code/bin(N)
     "/mnt/c/Windows/System32/WindowsPowerShell/v1.0"
     "/snap/bin"
     "$HOME/.local/bin"

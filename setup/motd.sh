@@ -2,27 +2,13 @@
 
 # Setup Var
 os=$1
+script_dir="$(cd "$(dirname "$0")" && pwd)"
 
+# Every branch overwrites /etc/motd (never appends), so re-running is safe.
 if [[ $os == "darwin" ]]; then
-  # Echo out the motd
-  echo -e "\033[0;32m          .:'   \033[0m " >> /etc/motd
-  echo -e "\033[0;32m      __ :'__     \033[0m____    __    ____  ___       __       __  ___  _______ .______" >> /etc/motd
-  echo -e "\033[0;32m   .'\`__\`-'__\`\`.  \033[0m\   \  /  \  /   / /   \     |  |     |  |/  / |   ____||   _  \\" >> /etc/motd
-  echo -e "\033[0;33m  :__________.-'   \033[0m\   \/    \/   / /  ^  \    |  |     |  '  /  |  |__   |  |_)  |" >> /etc/motd
-  echo -e "\033[0;31m  :_________:       \033[0m\            / /  /_\  \   |  |     |    <   |   __|  |      /" >> /etc/motd
-  echo -e "\033[0;35m   :_________\`-;     \033[0m\    /\    / /  _____  \  |  \`----.|  .  \  |  |____ |  |\  \`----." >> /etc/motd
-  echo -e "\033[0;34m    \`.__.-.__.'       \033[0m\__/  \__/ /__/     \__\ |_______||__|\__\ |_______|| _| \`._____|" >> /etc/motd
-  echo -e "\033[0m ======================================================================================" >> /etc/motd
+  # Rainbow Apple (braille, traced from the SVG) + WALKER wordmark; needs >= 79 columns
+  sudo install -m 644 "$script_dir/motd-darwin.ansi" /etc/motd
 elif [[ $os == "ubuntu" ]]; then
-  sudo echo -e "               \033[31m.-." >> /etc/motd
-  sudo echo -e "         \033[38;5;166m.-'\`\`\033[31m(   )" >> /etc/motd
-  sudo echo -e "  \033[38;5;220m    ,\`\ \033[38;5;166m\    \033[31m\`-\`\033[38;5;166m. " >> /etc/motd
-  sudo echo -e "  \033[38;5;220m   /   \ \033[38;5;166m'\`\`-.   \`    \033[0m ____    __    ____  ___       __        __  ___  _______  .______" >> /etc/motd
-  sudo echo -e " \033[38;5;166m  .-.  \033[38;5;220m,   \033[38;5;166m    \`___:   \033[0m \   \  /  \  /   / /   \     |  |      |  |/  / |   ____| |   _  \ " >> /etc/motd
-  sudo echo -e " \033[38;5;166m (   ) \033[38;5;220m:   \033[31m     ___    \033[0m  \   \/    \/   / /  ^  \    |  |      |  '  /  |  |__    |  |_)  |" >> /etc/motd
-  sudo echo -e " \033[38;5;166m  \`-\`  \033[38;5;220m\`  \033[31m     ,   :   \033[0m   \            / /  /_\  \   |  |      |    <   |   __|   |      /" >> /etc/motd
-  sudo echo -e " \033[38;5;220m    \   / \033[31m,..-\`   ,    \033[0m    \    /\    / /  _____  \  |  \`----. |  .  \  |  |____  |  |\  \`----." >> /etc/motd
-  sudo echo -e " \033[38;5;220m     \`./ \033[31m/    \033[38;5;220m.-.\033[31m\` \033[0m         \__/  \__/ /__/     \__\ |_______| |__|\__\ |_______| | _| \______|" >> /etc/motd
-  sudo echo -e "         \033[31m\`-..-\033[38;5;220m(   )" >> /etc/motd
-  sudo echo -e "               \033[38;5;220m\`-\` \033[0m " >> /etc/motd
+  # 2004 Circle of Friends (braille, traced from the SVG) + WALKER wordmark; needs >= 80 columns
+  sudo install -m 644 "$script_dir/motd-ubuntu.ansi" /etc/motd
 fi
